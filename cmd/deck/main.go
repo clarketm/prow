@@ -219,7 +219,7 @@ var (
 	}
 )
 
-type authCfgGetter func() *prowapi.RerunAuthConfig
+type authCfgGetter func(*prowapi.Refs) prowapi.RerunAuthConfig
 
 type traceResponseWriter struct {
 	http.ResponseWriter
@@ -363,6 +363,10 @@ func main() {
 		fallbackHandler = http.NotFound
 	}
 
+	authCfgGetter := func(refs *prowapi.Refs) prowapi.RerunAuthConfig {
+		return cfg().Deck.RerunAuthConfigs.GetRerunAuthConfig(refs)
+	}
+
 	mux.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
 		if r.URL.Path != "/" {
 			fallbackHandler(w, r)
@@ -375,14 +379,14 @@ func main() {
 		}{
 			SpyglassEnabled: o.spyglass,
 			ReRunCreatesJob: o.rerunCreatesJob,
-			AllowAnyone:     cfg().Deck.RerunAuthConfig.AllowAnyone})
+			AllowAnyone:     authCfgGetter(nil).AllowAnyone})
 		indexHandler(w, r)
 	})
 
 	if runLocal {
 		mux = localOnlyMain(cfg, o, mux)
 	} else {
-		mux = prodOnlyMain(cfg, pluginAgent, o, mux)
+		mux = prodOnlyMain(cfg, pluginAgent, authCfgGetter, o, mux)
 	}
 
 	// signal to the world that we're ready
@@ -419,7 +423,7 @@ func main() {
 
 	// if we allow direct reruns, we must protect against CSRF in all post requests using the cookie secret as a token
 	// for more information about CSRF, see https://github.com/kubernetes/test-infra/blob/master/prow/cmd/deck/csrf.md
-	if o.rerunCreatesJob && csrfToken == nil && !cfg().Deck.RerunAuthConfig.AllowAnyone {
+	if o.rerunCreatesJob && csrfToken == nil && !authCfgGetter(nil).AllowAnyone {
 		logrus.Fatal("Rerun creates job cannot be enabled without CSRF protection, which requires --cookie-secret to be exactly 32 bytes")
 		return
 	}
@@ -522,7 +526,7 @@ func (w *pjListingClientWrapper) List(
 }
 
 // prodOnlyMain contains logic only used when running deployed, not locally
-func prodOnlyMain(cfg config.Getter, pluginAgent *plugins.ConfigAgent, o options, mux *http.ServeMux) *http.ServeMux {
+func prodOnlyMain(cfg config.Getter, pluginAgent *plugins.ConfigAgent, authCfgGetter authCfgGetter, o options, mux *http.ServeMux) *http.ServeMux {
 	prowJobClient, err := o.kubernetes.ProwJobClient(cfg().ProwJobNamespace, false)
 	if err != nil {
 		logrus.WithError(err).Fatal("Error getting ProwJob client for infrastructure cluster.")
@@ -566,8 +570,6 @@ func prodOnlyMain(cfg config.Getter, pluginAgent *plugins.ConfigAgent, o options
 		showHidden: o.showHidden,
 	}, podLogClients, cfg)
 	ja.Start()
-
-	cfgGetter := func() *prowapi.RerunAuthConfig { return &cfg().Deck.RerunAuthConfig }
 
 	// setup prod only handlers
 	mux.Handle("/data.js", gziphandler.GzipHandler(handleData(ja, logrus.WithField("handler", "/data.js"))))
@@ -681,7 +683,7 @@ func prodOnlyMain(cfg config.Getter, pluginAgent *plugins.ConfigAgent, o options
 		mux.Handle("/github-login/redirect", goa.HandleRedirect(oauthClient, &o.github, secure))
 	}
 
-	mux.Handle("/rerun", gziphandler.GzipHandler(handleRerun(prowJobClient, o.rerunCreatesJob, cfgGetter, goa, &o.github, githubClient, pluginAgent, logrus.WithField("handler", "/rerun"))))
+	mux.Handle("/rerun", gziphandler.GzipHandler(handleRerun(prowJobClient, o.rerunCreatesJob, authCfgGetter, goa, &o.github, githubClient, pluginAgent, logrus.WithField("handler", "/rerun"))))
 
 	// optionally inject http->https redirect handler when behind loadbalancer
 	if o.redirectHTTPTo != "" {
@@ -1361,7 +1363,7 @@ func handleProwJob(prowJobClient prowv1.ProwJobInterface, log *logrus.Entry) htt
 }
 
 // canTriggerJob determines whether the given user can trigger any job.
-func canTriggerJob(user string, pj prowapi.ProwJob, cfg *prowapi.RerunAuthConfig, cli prowgithub.RerunClient, pluginAgent *plugins.ConfigAgent, log *logrus.Entry) (bool, error) {
+func canTriggerJob(user string, pj prowapi.ProwJob, cfg prowapi.RerunAuthConfig, cli prowgithub.RerunClient, pluginAgent *plugins.ConfigAgent, log *logrus.Entry) (bool, error) {
 	auth, err := cfg.IsAuthorized(user, cli)
 	if auth {
 		return true, nil
@@ -1429,7 +1431,7 @@ func handleRerun(prowJobClient prowv1.ProwJobInterface, createProwJob bool, cfg 
 				http.Error(w, "Direct rerun feature is not enabled. Enable with the '--rerun-creates-job' flag.", http.StatusMethodNotAllowed)
 				return
 			}
-			authConfig := cfg()
+			authConfig := cfg(pj.Spec.Refs)
 			var allowed bool
 			if authConfig.AllowAnyone || pj.Spec.RerunAuthConfig.AllowAnyone {
 				// Skip getting the users login via GH oauth if anyone is allowed to rerun

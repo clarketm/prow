@@ -391,7 +391,7 @@ func TestRerun(t *testing.T) {
 							},
 						},
 					},
-					RerunAuthConfig: prowapi.RerunAuthConfig{
+					RerunAuthConfig: &prowapi.RerunAuthConfig{
 						AllowAnyone:   false,
 						GitHubUsers:   []string{"authorized", "alsoauthorized"},
 						GitHubTeamIDs: []int{42},
@@ -401,8 +401,8 @@ func TestRerun(t *testing.T) {
 					State: prowapi.PendingState,
 				},
 			})
-			configGetter := func() *prowapi.RerunAuthConfig {
-				return &prowapi.RerunAuthConfig{
+			authCfgGetter := func(refs *prowapi.Refs) prowapi.RerunAuthConfig {
+				return prowapi.RerunAuthConfig{
 					AllowAnyone: tc.allowAnyone,
 					GitHubUsers: tc.authorized,
 				}
@@ -434,7 +434,7 @@ func TestRerun(t *testing.T) {
 			ghc := mockGitHubConfigGetter{githubLogin: tc.login}
 			rc := &fakegithub.FakeClient{OrgMembers: map[string][]string{"org": {"org-member"}}}
 			pca := plugins.NewFakeConfigAgent()
-			handler := handleRerun(fakeProwJobClient.ProwV1().ProwJobs("prowjobs"), tc.rerunCreatesJob, configGetter, goa, ghc, rc, &pca, logrus.WithField("handler", "/rerun"))
+			handler := handleRerun(fakeProwJobClient.ProwV1().ProwJobs("prowjobs"), tc.rerunCreatesJob, authCfgGetter, goa, ghc, rc, &pca, logrus.WithField("handler", "/rerun"))
 			handler.ServeHTTP(rr, req)
 			if rr.Code != tc.httpCode {
 				t.Fatalf("Bad error code: %d", rr.Code)

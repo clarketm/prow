@@ -156,7 +156,7 @@ type ProwJobSpec struct {
 	ReporterConfig *ReporterConfig `json:"reporter_config,omitempty"`
 
 	// RerunAuthConfig holds information about which users can rerun the job
-	RerunAuthConfig RerunAuthConfig `json:"rerun_auth_config,omitempty"`
+	RerunAuthConfig *RerunAuthConfig `json:"rerun_auth_config,omitempty"`
 
 	// Hidden specifies if the Job is considered hidden.
 	// Hidden jobs are only shown by deck instances that have the
@@ -170,6 +170,10 @@ type GitHubTeamSlug struct {
 	Slug string `json:"slug"`
 	Org  string `json:"org"`
 }
+
+// RerunAuthConfigs represents the configs for rerun authorization in Deck.
+// Use `org/repo`, `org` or `*` as key and a `RerunAuthConfig` struct as value.
+type RerunAuthConfigs map[string]RerunAuthConfig
 
 type RerunAuthConfig struct {
 	// If AllowAnyone is set to true, any user can rerun the job
@@ -236,6 +240,35 @@ func (rac *RerunAuthConfig) IsAuthorized(user string, cli prowgithub.RerunClient
 		}
 	}
 	return false, nil
+}
+
+// Validate validates the RerunAuthConfig fields.
+func (rac *RerunAuthConfig) Validate() error {
+	hasRestriction := len(rac.GitHubUsers) > 0 || len(rac.GitHubTeamIDs) > 0 || len(rac.GitHubTeamSlugs) > 0 || len(rac.GitHubOrgs) > 0
+
+	// If a whitelist is specified, the user probably does not intend for anyone to be able to rerun any job.
+	if rac.AllowAnyone && hasRestriction {
+		return errors.New("allow anyone is set to true and permitted users or groups are specified")
+	}
+
+	return nil
+}
+
+// GetRerunAuthConfig returns the appropriate RerunAuthConfig based on the provided Refs.
+func (rac RerunAuthConfigs) GetRerunAuthConfig(refs *Refs) RerunAuthConfig {
+	if refs == nil {
+		return rac["*"]
+	}
+
+	if rerun, exists := rac[fmt.Sprintf("%s/%s", refs.Org, refs.Repo)]; exists {
+		return rerun
+	}
+
+	if rerun, exists := rac[refs.Org]; exists {
+		return rerun
+	}
+
+	return rac["*"]
 }
 
 type ReporterConfig struct {

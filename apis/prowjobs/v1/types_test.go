@@ -255,3 +255,117 @@ func TestRefsToString(t *testing.T) {
 		}
 	}
 }
+
+func TestRerunAuthConfigValidate(t *testing.T) {
+	var testCases = []struct {
+		name        string
+		config      *RerunAuthConfig
+		errExpected bool
+	}{
+		{
+			name:        "disallow all",
+			config:      &RerunAuthConfig{AllowAnyone: false},
+			errExpected: false,
+		},
+		{
+			name:        "no restrictions",
+			config:      &RerunAuthConfig{},
+			errExpected: false,
+		},
+		{
+			name:        "allow any",
+			config:      &RerunAuthConfig{AllowAnyone: true},
+			errExpected: false,
+		},
+		{
+			name:        "restrict orgs",
+			config:      &RerunAuthConfig{GitHubOrgs: []string{"istio"}},
+			errExpected: false,
+		},
+		{
+			name:        "restrict orgs and users",
+			config:      &RerunAuthConfig{GitHubOrgs: []string{"istio", "kubernetes"}, GitHubUsers: []string{"clarketm", "scoobydoo"}},
+			errExpected: false,
+		},
+		{
+			name:        "allow any and has restriction",
+			config:      &RerunAuthConfig{AllowAnyone: true, GitHubOrgs: []string{"istio"}},
+			errExpected: true,
+		},
+	}
+
+	for _, tc := range testCases {
+		t.Run(tc.name, func(t *testing.T) {
+
+			if err := tc.config.Validate(); (err != nil) != tc.errExpected {
+				t.Errorf("Expected error %v, got %v", tc.errExpected, err)
+			}
+		})
+	}
+}
+
+func TestRerunAuthConfigsGetRerunAuthConfig(t *testing.T) {
+	var testCases = []struct {
+		name     string
+		configs  RerunAuthConfigs
+		refs     *Refs
+		expected RerunAuthConfig
+	}{
+		{
+			name:     "default to an empty config",
+			configs:  RerunAuthConfigs{},
+			refs:     &Refs{Org: "my-default-org", Repo: "my-default-repo"},
+			expected: RerunAuthConfig{},
+		},
+		{
+			name:     "unknown org or org/repo return wildcard",
+			configs:  RerunAuthConfigs{"*": RerunAuthConfig{GitHubUsers: []string{"clarketm"}}},
+			refs:     &Refs{Org: "my-default-org", Repo: "my-default-repo"},
+			expected: RerunAuthConfig{GitHubUsers: []string{"clarketm"}},
+		},
+		{
+			name:     "no refs return wildcard",
+			configs:  RerunAuthConfigs{"*": RerunAuthConfig{GitHubUsers: []string{"leonardo"}}},
+			refs:     nil,
+			expected: RerunAuthConfig{GitHubUsers: []string{"leonardo"}},
+		},
+		{
+			name: "use org if defined",
+			configs: RerunAuthConfigs{
+				"*":                RerunAuthConfig{GitHubUsers: []string{"clarketm"}},
+				"istio":            RerunAuthConfig{GitHubUsers: []string{"scoobydoo"}},
+				"istio/test-infra": RerunAuthConfig{GitHubUsers: []string{"billybob"}},
+			},
+			refs:     &Refs{Org: "istio", Repo: "istio"},
+			expected: RerunAuthConfig{GitHubUsers: []string{"scoobydoo"}},
+		},
+		{
+			name: "use org/repo if defined",
+			configs: RerunAuthConfigs{
+				"*":           RerunAuthConfig{GitHubUsers: []string{"clarketm"}},
+				"istio/istio": RerunAuthConfig{GitHubUsers: []string{"skywalker"}},
+			},
+			refs:     &Refs{Org: "istio", Repo: "istio"},
+			expected: RerunAuthConfig{GitHubUsers: []string{"skywalker"}},
+		},
+		{
+			name: "org/repo takes precedence over org",
+			configs: RerunAuthConfigs{
+				"*":           RerunAuthConfig{GitHubUsers: []string{"clarketm"}},
+				"istio":       RerunAuthConfig{GitHubUsers: []string{"scrappydoo"}},
+				"istio/istio": RerunAuthConfig{GitHubUsers: []string{"airbender"}},
+			},
+			refs:     &Refs{Org: "istio", Repo: "istio"},
+			expected: RerunAuthConfig{GitHubUsers: []string{"airbender"}},
+		},
+	}
+
+	for _, tc := range testCases {
+		t.Run(tc.name, func(t *testing.T) {
+
+			if actual := tc.configs.GetRerunAuthConfig(tc.refs); !reflect.DeepEqual(actual, tc.expected) {
+				t.Errorf("Expected %v, got %v", tc.expected, actual)
+			}
+		})
+	}
+}
