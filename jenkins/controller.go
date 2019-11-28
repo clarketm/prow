@@ -26,14 +26,14 @@ import (
 	"github.com/sirupsen/logrus"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	"k8s.io/apimachinery/pkg/util/clock"
-	prowv1 "k8s.io/test-infra/prow/client/clientset/versioned/typed/prowjobs/v1"
+	prowv1 "github.com/clarketm/prow/client/clientset/versioned/typed/prowjobs/v1"
 
-	prowapi "k8s.io/test-infra/prow/apis/prowjobs/v1"
-	"k8s.io/test-infra/prow/config"
-	"k8s.io/test-infra/prow/github"
-	reportlib "k8s.io/test-infra/prow/github/report"
-	"k8s.io/test-infra/prow/kube"
-	"k8s.io/test-infra/prow/pjutil"
+	prowapi "github.com/clarketm/prow/apis/prowjobs/v1"
+	"github.com/clarketm/prow/config"
+	"github.com/clarketm/prow/github"
+	reportlib "github.com/clarketm/prow/github/report"
+	"github.com/clarketm/prow/kube"
+	"github.com/clarketm/prow/pjutil"
 )
 
 type prowJobClient interface {

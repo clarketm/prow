@@ -21,8 +21,8 @@ import (
 	"strings"
 	"testing"
 
-	prowapi "k8s.io/test-infra/prow/apis/prowjobs/v1"
-	"k8s.io/test-infra/prow/github"
+	prowapi "github.com/clarketm/prow/apis/prowjobs/v1"
+	"github.com/clarketm/prow/github"
 )
 
 func TestParseIssueComment(t *testing.T) {

@@ -25,7 +25,7 @@ import (
 	"cloud.google.com/go/storage"
 	"github.com/sirupsen/logrus"
 
-	"k8s.io/test-infra/prow/spyglass/lenses"
+	"github.com/clarketm/prow/spyglass/lenses"
 )
 
 // GCSArtifact represents some output of a prow job stored in GCS

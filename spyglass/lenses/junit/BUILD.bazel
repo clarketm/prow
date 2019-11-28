@@ -5,7 +5,7 @@ load("@npm_bazel_typescript//:index.bzl", "ts_library")
 go_library(
     name = "go_default_library",
     srcs = ["lens.go"],
-    importpath = "k8s.io/test-infra/prow/spyglass/lenses/junit",
+    importpath = "github.com/clarketm/prow/spyglass/lenses/junit",
     visibility = ["//visibility:public"],
     deps = [
         "//prow/spyglass/lenses:go_default_library",

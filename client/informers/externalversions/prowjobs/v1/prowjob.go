@@ -25,10 +25,10 @@ import (
 	runtime "k8s.io/apimachinery/pkg/runtime"
 	watch "k8s.io/apimachinery/pkg/watch"
 	cache "k8s.io/client-go/tools/cache"
-	prowjobsv1 "k8s.io/test-infra/prow/apis/prowjobs/v1"
-	versioned "k8s.io/test-infra/prow/client/clientset/versioned"
-	internalinterfaces "k8s.io/test-infra/prow/client/informers/externalversions/internalinterfaces"
-	v1 "k8s.io/test-infra/prow/client/listers/prowjobs/v1"
+	prowjobsv1 "github.com/clarketm/prow/apis/prowjobs/v1"
+	versioned "github.com/clarketm/prow/client/clientset/versioned"
+	internalinterfaces "github.com/clarketm/prow/client/informers/externalversions/internalinterfaces"
+	v1 "github.com/clarketm/prow/client/listers/prowjobs/v1"
 )
 
 // ProwJobInformer provides access to a shared informer and lister for

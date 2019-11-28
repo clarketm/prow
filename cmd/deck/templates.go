@@ -20,8 +20,8 @@ import (
 	"github.com/gorilla/csrf"
 	"github.com/sirupsen/logrus"
 	"html/template"
-	"k8s.io/test-infra/prow/cmd/deck/version"
-	"k8s.io/test-infra/prow/config"
+	"github.com/clarketm/prow/cmd/deck/version"
+	"github.com/clarketm/prow/config"
 	"net/http"
 	"path"
 )

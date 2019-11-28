@@ -24,10 +24,10 @@ import (
 
 	"regexp"
 
-	"k8s.io/test-infra/prow/github"
-	"k8s.io/test-infra/prow/labels"
-	"k8s.io/test-infra/prow/pluginhelp"
-	"k8s.io/test-infra/prow/plugins"
+	"github.com/clarketm/prow/github"
+	"github.com/clarketm/prow/labels"
+	"github.com/clarketm/prow/pluginhelp"
+	"github.com/clarketm/prow/plugins"
 )
 
 const (

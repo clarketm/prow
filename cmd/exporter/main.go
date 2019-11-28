@@ -23,14 +23,14 @@ import (
 	"github.com/prometheus/client_golang/prometheus"
 	"github.com/sirupsen/logrus"
 
-	prowjobinformer "k8s.io/test-infra/prow/client/informers/externalversions"
-	"k8s.io/test-infra/prow/config"
-	prowflagutil "k8s.io/test-infra/prow/flagutil"
-	"k8s.io/test-infra/prow/interrupts"
-	"k8s.io/test-infra/prow/logrusutil"
-	"k8s.io/test-infra/prow/metrics"
-	"k8s.io/test-infra/prow/metrics/prowjobs"
-	"k8s.io/test-infra/prow/pjutil"
+	prowjobinformer "github.com/clarketm/prow/client/informers/externalversions"
+	"github.com/clarketm/prow/config"
+	prowflagutil "github.com/clarketm/prow/flagutil"
+	"github.com/clarketm/prow/interrupts"
+	"github.com/clarketm/prow/logrusutil"
+	"github.com/clarketm/prow/metrics"
+	"github.com/clarketm/prow/metrics/prowjobs"
+	"github.com/clarketm/prow/pjutil"
 )
 
 type options struct {

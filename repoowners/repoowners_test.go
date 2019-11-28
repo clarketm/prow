@@ -29,9 +29,9 @@ import (
 
 	"k8s.io/apimachinery/pkg/util/diff"
 	"k8s.io/apimachinery/pkg/util/sets"
-	prowConf "k8s.io/test-infra/prow/config"
-	"k8s.io/test-infra/prow/git/localgit"
-	"k8s.io/test-infra/prow/github"
+	prowConf "github.com/clarketm/prow/config"
+	"github.com/clarketm/prow/git/localgit"
+	"github.com/clarketm/prow/github"
 )
 
 var (

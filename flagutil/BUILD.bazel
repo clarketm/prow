@@ -11,7 +11,7 @@ go_library(
         "kubernetes_cluster_clients.go",
         "strings.go",
     ],
-    importpath = "k8s.io/test-infra/prow/flagutil",
+    importpath = "github.com/clarketm/prow/flagutil",
     visibility = ["//visibility:public"],
     deps = [
         "//pkg/ghclient:go_default_library",

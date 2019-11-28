@@ -26,9 +26,9 @@ import (
 	"time"
 
 	"github.com/sirupsen/logrus"
-	"k8s.io/test-infra/prow/interrupts"
-	"k8s.io/test-infra/prow/logrusutil"
-	"k8s.io/test-infra/prow/pjutil"
+	"github.com/clarketm/prow/interrupts"
+	"github.com/clarketm/prow/logrusutil"
+	"github.com/clarketm/prow/pjutil"
 )
 
 type options struct {

@@ -23,9 +23,9 @@ import (
 	"github.com/sirupsen/logrus"
 	"k8s.io/apimachinery/pkg/api/equality"
 
-	"k8s.io/test-infra/prow/config"
-	"k8s.io/test-infra/prow/tide"
-	"k8s.io/test-infra/prow/tide/history"
+	"github.com/clarketm/prow/config"
+	"github.com/clarketm/prow/tide"
+	"github.com/clarketm/prow/tide/history"
 )
 
 func TestFilterHidden(t *testing.T) {

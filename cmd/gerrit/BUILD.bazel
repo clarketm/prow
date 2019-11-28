@@ -6,7 +6,7 @@ load("//prow:def.bzl", "prow_image")
 go_library(
     name = "go_default_library",
     srcs = ["main.go"],
-    importpath = "k8s.io/test-infra/prow/cmd/gerrit",
+    importpath = "github.com/clarketm/prow/cmd/gerrit",
     visibility = ["//visibility:private"],
     deps = [
         "//pkg/io:go_default_library",

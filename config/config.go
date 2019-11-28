@@ -45,12 +45,12 @@ import (
 	"sigs.k8s.io/yaml"
 
 	pipelinev1alpha1 "github.com/tektoncd/pipeline/pkg/apis/pipeline/v1alpha1"
-	prowapi "k8s.io/test-infra/prow/apis/prowjobs/v1"
-	"k8s.io/test-infra/prow/git"
-	"k8s.io/test-infra/prow/github"
-	"k8s.io/test-infra/prow/kube"
-	"k8s.io/test-infra/prow/pod-utils/decorate"
-	"k8s.io/test-infra/prow/pod-utils/downwardapi"
+	prowapi "github.com/clarketm/prow/apis/prowjobs/v1"
+	"github.com/clarketm/prow/git"
+	"github.com/clarketm/prow/github"
+	"github.com/clarketm/prow/kube"
+	"github.com/clarketm/prow/pod-utils/decorate"
+	"github.com/clarketm/prow/pod-utils/downwardapi"
 )
 
 const (

@@ -18,8 +18,8 @@ package main
 
 import (
 	"flag"
-	"k8s.io/test-infra/prow/flagutil"
-	prowflagutil "k8s.io/test-infra/prow/flagutil"
+	"github.com/clarketm/prow/flagutil"
+	prowflagutil "github.com/clarketm/prow/flagutil"
 	"reflect"
 	"testing"
 )

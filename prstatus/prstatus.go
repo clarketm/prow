@@ -30,9 +30,9 @@ import (
 	"github.com/sirupsen/logrus"
 	"golang.org/x/oauth2"
 
-	"k8s.io/test-infra/prow/flagutil"
-	"k8s.io/test-infra/prow/github"
-	"k8s.io/test-infra/prow/githuboauth"
+	"github.com/clarketm/prow/flagutil"
+	"github.com/clarketm/prow/github"
+	"github.com/clarketm/prow/githuboauth"
 )
 
 const (

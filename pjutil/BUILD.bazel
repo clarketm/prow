@@ -18,7 +18,7 @@ go_library(
         "pprof.go",
         "tot.go",
     ],
-    importpath = "k8s.io/test-infra/prow/pjutil",
+    importpath = "github.com/clarketm/prow/pjutil",
     deps = [
         "//prow/apis/prowjobs/v1:go_default_library",
         "//prow/config:go_default_library",

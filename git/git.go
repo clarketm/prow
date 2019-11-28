@@ -32,7 +32,7 @@ import (
 
 	"github.com/sirupsen/logrus"
 
-	prowgithub "k8s.io/test-infra/prow/github"
+	prowgithub "github.com/clarketm/prow/github"
 )
 
 const github = "github.com"

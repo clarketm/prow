@@ -25,7 +25,7 @@ import (
 	"k8s.io/api/core/v1"
 	"k8s.io/apimachinery/pkg/util/sets"
 
-	cfg "k8s.io/test-infra/prow/config"
+	cfg "github.com/clarketm/prow/config"
 )
 
 var configPath = flag.String("config", "../../../config/prow/config.yaml", "Path to prow config")

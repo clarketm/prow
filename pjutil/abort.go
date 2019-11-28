@@ -26,8 +26,8 @@ import (
 	"github.com/sirupsen/logrus"
 	ktypes "k8s.io/apimachinery/pkg/types"
 
-	prowapi "k8s.io/test-infra/prow/apis/prowjobs/v1"
-	"k8s.io/test-infra/prow/github/reporter"
+	prowapi "github.com/clarketm/prow/apis/prowjobs/v1"
+	"github.com/clarketm/prow/github/reporter"
 )
 
 // prowClient a minimalistic prow client required by the aborter

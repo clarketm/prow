@@ -28,8 +28,8 @@ import (
 
 	"github.com/GoogleCloudPlatform/testgrid/metadata"
 	"github.com/sirupsen/logrus"
-	"k8s.io/test-infra/prow/pod-utils/gcs"
-	"k8s.io/test-infra/prow/spyglass/lenses"
+	"github.com/clarketm/prow/pod-utils/gcs"
+	"github.com/clarketm/prow/spyglass/lenses"
 )
 
 const (

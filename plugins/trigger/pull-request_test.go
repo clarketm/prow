@@ -22,13 +22,13 @@ import (
 
 	"github.com/sirupsen/logrus"
 	clienttesting "k8s.io/client-go/testing"
-	"k8s.io/test-infra/prow/client/clientset/versioned/fake"
-	"k8s.io/test-infra/prow/config"
-	"k8s.io/test-infra/prow/git"
-	"k8s.io/test-infra/prow/github"
-	"k8s.io/test-infra/prow/github/fakegithub"
-	"k8s.io/test-infra/prow/labels"
-	"k8s.io/test-infra/prow/plugins"
+	"github.com/clarketm/prow/client/clientset/versioned/fake"
+	"github.com/clarketm/prow/config"
+	"github.com/clarketm/prow/git"
+	"github.com/clarketm/prow/github"
+	"github.com/clarketm/prow/github/fakegithub"
+	"github.com/clarketm/prow/labels"
+	"github.com/clarketm/prow/plugins"
 )
 
 func TestTrusted(t *testing.T) {

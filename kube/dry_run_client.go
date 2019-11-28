@@ -28,8 +28,8 @@ import (
 	"k8s.io/apimachinery/pkg/types"
 	"k8s.io/apimachinery/pkg/watch"
 
-	prowapi "k8s.io/test-infra/prow/apis/prowjobs/v1"
-	prowv1 "k8s.io/test-infra/prow/client/clientset/versioned/typed/prowjobs/v1"
+	prowapi "github.com/clarketm/prow/apis/prowjobs/v1"
+	prowv1 "github.com/clarketm/prow/client/clientset/versioned/typed/prowjobs/v1"
 )
 
 // NewDryRunProwJobClient creates a new client that uses deck as a read-only proxy for ProwJob data

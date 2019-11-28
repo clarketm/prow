@@ -21,7 +21,7 @@ go_test(
 go_library(
     name = "go_default_library",
     srcs = ["releasenote.go"],
-    importpath = "k8s.io/test-infra/prow/plugins/releasenote",
+    importpath = "github.com/clarketm/prow/plugins/releasenote",
     deps = [
         "//prow/github:go_default_library",
         "//prow/pluginhelp:go_default_library",

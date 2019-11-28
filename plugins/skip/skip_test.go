@@ -22,10 +22,10 @@ import (
 
 	"github.com/sirupsen/logrus"
 
-	"k8s.io/test-infra/prow/config"
-	"k8s.io/test-infra/prow/git"
-	"k8s.io/test-infra/prow/github"
-	"k8s.io/test-infra/prow/github/fakegithub"
+	"github.com/clarketm/prow/config"
+	"github.com/clarketm/prow/git"
+	"github.com/clarketm/prow/github"
+	"github.com/clarketm/prow/github/fakegithub"
 )
 
 func TestSkipStatus(t *testing.T) {

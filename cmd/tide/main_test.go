@@ -22,8 +22,8 @@ import (
 	"testing"
 
 	"k8s.io/apimachinery/pkg/util/sets"
-	"k8s.io/test-infra/prow/config"
-	"k8s.io/test-infra/prow/flagutil"
+	"github.com/clarketm/prow/config"
+	"github.com/clarketm/prow/flagutil"
 )
 
 func Test_gatherOptions(t *testing.T) {

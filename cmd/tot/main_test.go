@@ -26,7 +26,7 @@ import (
 	"strings"
 	"testing"
 
-	"k8s.io/test-infra/prow/config"
+	"github.com/clarketm/prow/config"
 )
 
 func expectEqual(t *testing.T, msg string, have interface{}, want interface{}) {

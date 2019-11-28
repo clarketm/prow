@@ -21,7 +21,7 @@ package fake
 import (
 	rest "k8s.io/client-go/rest"
 	testing "k8s.io/client-go/testing"
-	v1 "k8s.io/test-infra/prow/client/clientset/versioned/typed/prowjobs/v1"
+	v1 "github.com/clarketm/prow/client/clientset/versioned/typed/prowjobs/v1"
 )
 
 type FakeProwV1 struct {

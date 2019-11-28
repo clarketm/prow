@@ -32,15 +32,15 @@ import (
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	"k8s.io/apimachinery/pkg/runtime"
 	"k8s.io/apimachinery/pkg/util/sets"
-	prowapi "k8s.io/test-infra/prow/apis/prowjobs/v1"
+	prowapi "github.com/clarketm/prow/apis/prowjobs/v1"
 	ctrlruntimeclient "sigs.k8s.io/controller-runtime/pkg/client"
 	"sigs.k8s.io/yaml"
 
 	"k8s.io/test-infra/pkg/io"
-	"k8s.io/test-infra/prow/config"
-	"k8s.io/test-infra/prow/git"
-	"k8s.io/test-infra/prow/github"
-	"k8s.io/test-infra/prow/tide/blockers"
+	"github.com/clarketm/prow/config"
+	"github.com/clarketm/prow/git"
+	"github.com/clarketm/prow/github"
+	"github.com/clarketm/prow/tide/blockers"
 )
 
 const (

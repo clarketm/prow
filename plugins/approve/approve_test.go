@@ -31,13 +31,13 @@ import (
 	"sigs.k8s.io/yaml"
 
 	"k8s.io/apimachinery/pkg/util/sets"
-	"k8s.io/test-infra/prow/config"
-	"k8s.io/test-infra/prow/github"
-	"k8s.io/test-infra/prow/github/fakegithub"
-	"k8s.io/test-infra/prow/labels"
-	"k8s.io/test-infra/prow/plugins"
-	"k8s.io/test-infra/prow/plugins/approve/approvers"
-	"k8s.io/test-infra/prow/repoowners"
+	"github.com/clarketm/prow/config"
+	"github.com/clarketm/prow/github"
+	"github.com/clarketm/prow/github/fakegithub"
+	"github.com/clarketm/prow/labels"
+	"github.com/clarketm/prow/plugins"
+	"github.com/clarketm/prow/plugins/approve/approvers"
+	"github.com/clarketm/prow/repoowners"
 )
 
 const prNumber = 1

@@ -22,7 +22,7 @@ import (
 	"io/ioutil"
 	"net/http"
 
-	"k8s.io/test-infra/prow/github"
+	"github.com/clarketm/prow/github"
 )
 
 // SendHook sends a GitHub event of type eventType to the provided address.

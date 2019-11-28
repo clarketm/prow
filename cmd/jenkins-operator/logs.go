@@ -24,7 +24,7 @@ import (
 
 	"github.com/sirupsen/logrus"
 
-	"k8s.io/test-infra/prow/jenkins"
+	"github.com/clarketm/prow/jenkins"
 )
 
 // Matches letters, numbers, hyphens, and underscores.

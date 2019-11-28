@@ -25,9 +25,9 @@ import (
 	"path"
 	"time"
 
-	prowapi "k8s.io/test-infra/prow/apis/prowjobs/v1"
-	"k8s.io/test-infra/prow/config"
-	"k8s.io/test-infra/prow/pod-utils/downwardapi"
+	prowapi "github.com/clarketm/prow/apis/prowjobs/v1"
+	"github.com/clarketm/prow/config"
+	"github.com/clarketm/prow/pod-utils/downwardapi"
 
 	"github.com/bwmarrin/snowflake"
 )

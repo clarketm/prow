@@ -9,7 +9,7 @@ load(
 go_library(
     name = "go_default_library",
     srcs = ["heart.go"],
-    importpath = "k8s.io/test-infra/prow/plugins/heart",
+    importpath = "github.com/clarketm/prow/plugins/heart",
     deps = [
         "//prow/github:go_default_library",
         "//prow/pluginhelp:go_default_library",

@@ -9,7 +9,7 @@ load(
 go_library(
     name = "go_default_library",
     srcs = ["dco.go"],
-    importpath = "k8s.io/test-infra/prow/plugins/dco",
+    importpath = "github.com/clarketm/prow/plugins/dco",
     deps = [
         "//prow/github:go_default_library",
         "//prow/pluginhelp:go_default_library",

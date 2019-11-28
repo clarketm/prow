@@ -34,10 +34,10 @@ import (
 	"k8s.io/apimachinery/pkg/runtime"
 	clienttesting "k8s.io/client-go/testing"
 
-	prowapi "k8s.io/test-infra/prow/apis/prowjobs/v1"
-	"k8s.io/test-infra/prow/client/clientset/versioned/fake"
-	"k8s.io/test-infra/prow/config"
-	"k8s.io/test-infra/prow/pubsub/reporter"
+	prowapi "github.com/clarketm/prow/apis/prowjobs/v1"
+	"github.com/clarketm/prow/client/clientset/versioned/fake"
+	"github.com/clarketm/prow/config"
+	"github.com/clarketm/prow/pubsub/reporter"
 
 	v1 "k8s.io/api/core/v1"
 )

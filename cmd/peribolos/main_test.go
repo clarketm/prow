@@ -25,9 +25,9 @@ import (
 	"testing"
 
 	"k8s.io/apimachinery/pkg/util/diff"
-	"k8s.io/test-infra/prow/config/org"
-	"k8s.io/test-infra/prow/flagutil"
-	"k8s.io/test-infra/prow/github"
+	"github.com/clarketm/prow/config/org"
+	"github.com/clarketm/prow/flagutil"
+	"github.com/clarketm/prow/github"
 
 	"k8s.io/apimachinery/pkg/util/sets"
 	"sigs.k8s.io/yaml"

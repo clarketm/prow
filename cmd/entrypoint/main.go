@@ -20,9 +20,9 @@ import (
 	"os"
 
 	"github.com/sirupsen/logrus"
-	"k8s.io/test-infra/prow/entrypoint"
-	"k8s.io/test-infra/prow/logrusutil"
-	"k8s.io/test-infra/prow/pod-utils/options"
+	"github.com/clarketm/prow/entrypoint"
+	"github.com/clarketm/prow/logrusutil"
+	"github.com/clarketm/prow/pod-utils/options"
 )
 
 func main() {

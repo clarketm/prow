@@ -27,7 +27,7 @@ import (
 	pipelinev1alpha1 "github.com/tektoncd/pipeline/pkg/apis/pipeline/v1alpha1"
 	corev1 "k8s.io/api/core/v1"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
-	prowgithub "k8s.io/test-infra/prow/github"
+	prowgithub "github.com/clarketm/prow/github"
 )
 
 // ProwJobType specifies how the job is triggered.

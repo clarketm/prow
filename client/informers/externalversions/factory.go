@@ -27,9 +27,9 @@ import (
 	runtime "k8s.io/apimachinery/pkg/runtime"
 	schema "k8s.io/apimachinery/pkg/runtime/schema"
 	cache "k8s.io/client-go/tools/cache"
-	versioned "k8s.io/test-infra/prow/client/clientset/versioned"
-	internalinterfaces "k8s.io/test-infra/prow/client/informers/externalversions/internalinterfaces"
-	prowjobs "k8s.io/test-infra/prow/client/informers/externalversions/prowjobs"
+	versioned "github.com/clarketm/prow/client/clientset/versioned"
+	internalinterfaces "github.com/clarketm/prow/client/informers/externalversions/internalinterfaces"
+	prowjobs "github.com/clarketm/prow/client/informers/externalversions/prowjobs"
 )
 
 // SharedInformerOption defines the functional option type for SharedInformerFactory.

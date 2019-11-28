@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"testing"
 
-	"k8s.io/test-infra/prow/git/localgit"
+	"github.com/clarketm/prow/git/localgit"
 )
 
 func TestDefaultProwYAMLGetter(t *testing.T) {

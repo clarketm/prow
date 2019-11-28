@@ -56,7 +56,7 @@ go_library(
         "spyglass.go",
         "testgrid.go",
     ],
-    importpath = "k8s.io/test-infra/prow/spyglass",
+    importpath = "github.com/clarketm/prow/spyglass",
     visibility = ["//visibility:public"],
     deps = [
         "//prow/apis/prowjobs/v1:go_default_library",

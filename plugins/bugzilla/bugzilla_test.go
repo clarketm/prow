@@ -27,11 +27,11 @@ import (
 	"k8s.io/apimachinery/pkg/util/sets"
 	"sigs.k8s.io/yaml"
 
-	"k8s.io/test-infra/prow/bugzilla"
-	"k8s.io/test-infra/prow/github"
-	"k8s.io/test-infra/prow/github/fakegithub"
-	"k8s.io/test-infra/prow/pluginhelp"
-	"k8s.io/test-infra/prow/plugins"
+	"github.com/clarketm/prow/bugzilla"
+	"github.com/clarketm/prow/github"
+	"github.com/clarketm/prow/github/fakegithub"
+	"github.com/clarketm/prow/pluginhelp"
+	"github.com/clarketm/prow/plugins"
 )
 
 func TestHelpProvider(t *testing.T) {

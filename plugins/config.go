@@ -30,10 +30,10 @@ import (
 
 	"k8s.io/apimachinery/pkg/util/sets"
 
-	"k8s.io/test-infra/prow/bugzilla"
-	"k8s.io/test-infra/prow/errorutil"
-	"k8s.io/test-infra/prow/kube"
-	"k8s.io/test-infra/prow/labels"
+	"github.com/clarketm/prow/bugzilla"
+	"github.com/clarketm/prow/errorutil"
+	"github.com/clarketm/prow/kube"
+	"github.com/clarketm/prow/labels"
 )
 
 const (

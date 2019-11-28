@@ -27,7 +27,7 @@ import (
 	"cloud.google.com/go/storage"
 	"github.com/sirupsen/logrus"
 
-	"k8s.io/test-infra/prow/errorutil"
+	"github.com/clarketm/prow/errorutil"
 )
 
 // UploadFunc knows how to upload into an object

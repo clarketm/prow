@@ -22,7 +22,7 @@ import (
 
 	"github.com/sirupsen/logrus"
 
-	"k8s.io/test-infra/prow/github"
+	"github.com/clarketm/prow/github"
 )
 
 type fakeClientClose struct {

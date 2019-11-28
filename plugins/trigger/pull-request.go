@@ -21,12 +21,12 @@ import (
 	"fmt"
 	"net/url"
 
-	"k8s.io/test-infra/prow/config"
-	"k8s.io/test-infra/prow/errorutil"
-	"k8s.io/test-infra/prow/github"
-	"k8s.io/test-infra/prow/labels"
-	"k8s.io/test-infra/prow/pjutil"
-	"k8s.io/test-infra/prow/plugins"
+	"github.com/clarketm/prow/config"
+	"github.com/clarketm/prow/errorutil"
+	"github.com/clarketm/prow/github"
+	"github.com/clarketm/prow/labels"
+	"github.com/clarketm/prow/pjutil"
+	"github.com/clarketm/prow/plugins"
 )
 
 func handlePR(c Client, trigger plugins.Trigger, pr github.PullRequestEvent) error {

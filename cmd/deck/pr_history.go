@@ -29,11 +29,11 @@ import (
 	"cloud.google.com/go/storage"
 	"github.com/sirupsen/logrus"
 	"k8s.io/apimachinery/pkg/util/sets"
-	v1 "k8s.io/test-infra/prow/apis/prowjobs/v1"
-	"k8s.io/test-infra/prow/config"
-	"k8s.io/test-infra/prow/gcsupload"
-	"k8s.io/test-infra/prow/git"
-	"k8s.io/test-infra/prow/pod-utils/downwardapi"
+	v1 "github.com/clarketm/prow/apis/prowjobs/v1"
+	"github.com/clarketm/prow/config"
+	"github.com/clarketm/prow/gcsupload"
+	"github.com/clarketm/prow/git"
+	"github.com/clarketm/prow/pod-utils/downwardapi"
 )
 
 var pullCommitRe = regexp.MustCompile(`^[-\w]+:\w{40},\d+:(\w{40})$`)

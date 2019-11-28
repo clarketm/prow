@@ -17,7 +17,7 @@ go_library(
         "logs.go",
         "main.go",
     ],
-    importpath = "k8s.io/test-infra/prow/cmd/jenkins-operator",
+    importpath = "github.com/clarketm/prow/cmd/jenkins-operator",
     deps = [
         "//pkg/flagutil:go_default_library",
         "//prow/config:go_default_library",

@@ -20,12 +20,12 @@ package main
 
 import (
 	"github.com/sirupsen/logrus"
-	"k8s.io/test-infra/prow/pod-utils/downwardapi"
-	"k8s.io/test-infra/prow/pod-utils/options"
+	"github.com/clarketm/prow/pod-utils/downwardapi"
+	"github.com/clarketm/prow/pod-utils/options"
 
-	"k8s.io/test-infra/prow/gcsupload"
-	"k8s.io/test-infra/prow/logrusutil"
-	"k8s.io/test-infra/prow/pod-utils/gcs"
+	"github.com/clarketm/prow/gcsupload"
+	"github.com/clarketm/prow/logrusutil"
+	"github.com/clarketm/prow/pod-utils/gcs"
 )
 
 func main() {

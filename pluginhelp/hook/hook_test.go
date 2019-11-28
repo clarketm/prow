@@ -27,10 +27,10 @@ import (
 	"github.com/sirupsen/logrus"
 
 	"k8s.io/apimachinery/pkg/util/sets"
-	"k8s.io/test-infra/prow/github"
-	"k8s.io/test-infra/prow/pluginhelp"
-	"k8s.io/test-infra/prow/pluginhelp/externalplugins"
-	"k8s.io/test-infra/prow/plugins"
+	"github.com/clarketm/prow/github"
+	"github.com/clarketm/prow/pluginhelp"
+	"github.com/clarketm/prow/pluginhelp/externalplugins"
+	"github.com/clarketm/prow/plugins"
 )
 
 type fakeGitHubClient map[string][]string

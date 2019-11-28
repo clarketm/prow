@@ -29,12 +29,12 @@ import (
 	"sigs.k8s.io/yaml"
 
 	"k8s.io/apimachinery/pkg/util/sets"
-	"k8s.io/test-infra/prow/git/localgit"
-	"k8s.io/test-infra/prow/github"
-	"k8s.io/test-infra/prow/github/fakegithub"
-	"k8s.io/test-infra/prow/labels"
-	"k8s.io/test-infra/prow/plugins"
-	"k8s.io/test-infra/prow/repoowners"
+	"github.com/clarketm/prow/git/localgit"
+	"github.com/clarketm/prow/github"
+	"github.com/clarketm/prow/github/fakegithub"
+	"github.com/clarketm/prow/labels"
+	"github.com/clarketm/prow/plugins"
+	"github.com/clarketm/prow/repoowners"
 )
 
 var ownerFiles = map[string][]byte{

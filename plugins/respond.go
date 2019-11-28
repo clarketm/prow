@@ -20,7 +20,7 @@ import (
 	"fmt"
 	"strings"
 
-	"k8s.io/test-infra/prow/github"
+	"github.com/clarketm/prow/github"
 )
 
 // AboutThisBotWithoutCommands contains the message that explains how to interact with the bot.

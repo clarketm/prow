@@ -32,15 +32,15 @@ import (
 
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	corev1 "k8s.io/client-go/kubernetes/typed/core/v1"
-	prowapi "k8s.io/test-infra/prow/apis/prowjobs/v1"
-	prowv1 "k8s.io/test-infra/prow/client/clientset/versioned/typed/prowjobs/v1"
-	"k8s.io/test-infra/prow/config"
-	"k8s.io/test-infra/prow/github"
-	reportlib "k8s.io/test-infra/prow/github/report"
-	"k8s.io/test-infra/prow/github/reporter"
-	"k8s.io/test-infra/prow/kube"
-	"k8s.io/test-infra/prow/pjutil"
-	"k8s.io/test-infra/prow/pod-utils/decorate"
+	prowapi "github.com/clarketm/prow/apis/prowjobs/v1"
+	prowv1 "github.com/clarketm/prow/client/clientset/versioned/typed/prowjobs/v1"
+	"github.com/clarketm/prow/config"
+	"github.com/clarketm/prow/github"
+	reportlib "github.com/clarketm/prow/github/report"
+	"github.com/clarketm/prow/github/reporter"
+	"github.com/clarketm/prow/kube"
+	"github.com/clarketm/prow/pjutil"
+	"github.com/clarketm/prow/pod-utils/decorate"
 )
 
 // PodStatus constants

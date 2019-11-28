@@ -8,7 +8,7 @@ go_library(
         "target.go",
         "upload.go",
     ],
-    importpath = "k8s.io/test-infra/prow/pod-utils/gcs",
+    importpath = "github.com/clarketm/prow/pod-utils/gcs",
     visibility = ["//visibility:public"],
     deps = [
         "//prow/apis/prowjobs/v1:go_default_library",

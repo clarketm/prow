@@ -25,7 +25,7 @@ import (
 	"k8s.io/apimachinery/pkg/util/diff"
 	"sigs.k8s.io/yaml"
 
-	"k8s.io/test-infra/prow/bugzilla"
+	"github.com/clarketm/prow/bugzilla"
 )
 
 func TestValidateExternalPlugins(t *testing.T) {

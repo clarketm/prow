@@ -13,7 +13,7 @@ import (
 	v1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	"k8s.io/apimachinery/pkg/util/clock"
 
-	prowapi "k8s.io/test-infra/prow/apis/prowjobs/v1"
+	prowapi "github.com/clarketm/prow/apis/prowjobs/v1"
 )
 
 func TestProwJobLifecycleCollectorUpdate(t *testing.T) {

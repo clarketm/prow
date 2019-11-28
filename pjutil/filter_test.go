@@ -20,14 +20,14 @@ import (
 	"errors"
 	"fmt"
 	"k8s.io/apimachinery/pkg/util/sets"
-	"k8s.io/test-infra/prow/github"
+	"github.com/clarketm/prow/github"
 	"reflect"
 	"testing"
 
 	"github.com/sirupsen/logrus"
 
 	"k8s.io/apimachinery/pkg/util/diff"
-	"k8s.io/test-infra/prow/config"
+	"github.com/clarketm/prow/config"
 )
 
 func TestTestAllFilter(t *testing.T) {

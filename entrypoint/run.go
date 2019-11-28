@@ -33,7 +33,7 @@ import (
 	"github.com/sirupsen/logrus"
 
 	utilerrors "k8s.io/apimachinery/pkg/util/errors"
-	"k8s.io/test-infra/prow/pod-utils/wrapper"
+	"github.com/clarketm/prow/pod-utils/wrapper"
 )
 
 const (

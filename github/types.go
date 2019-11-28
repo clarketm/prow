@@ -22,7 +22,7 @@ import (
 	"strings"
 	"time"
 
-	"k8s.io/test-infra/prow/errorutil"
+	"github.com/clarketm/prow/errorutil"
 )
 
 const (

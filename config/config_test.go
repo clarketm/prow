@@ -34,14 +34,14 @@ import (
 	"k8s.io/apimachinery/pkg/util/sets"
 	utilpointer "k8s.io/utils/pointer"
 
-	prowapi "k8s.io/test-infra/prow/apis/prowjobs/v1"
-	prowjobv1 "k8s.io/test-infra/prow/apis/prowjobs/v1"
-	"k8s.io/test-infra/prow/config/secret"
-	"k8s.io/test-infra/prow/github"
-	"k8s.io/test-infra/prow/github/fakegithub"
-	"k8s.io/test-infra/prow/kube"
-	"k8s.io/test-infra/prow/pod-utils/decorate"
-	"k8s.io/test-infra/prow/pod-utils/downwardapi"
+	prowapi "github.com/clarketm/prow/apis/prowjobs/v1"
+	prowjobv1 "github.com/clarketm/prow/apis/prowjobs/v1"
+	"github.com/clarketm/prow/config/secret"
+	"github.com/clarketm/prow/github"
+	"github.com/clarketm/prow/github/fakegithub"
+	"github.com/clarketm/prow/kube"
+	"github.com/clarketm/prow/pod-utils/decorate"
+	"github.com/clarketm/prow/pod-utils/downwardapi"
 )
 
 func TestDefaultJobBase(t *testing.T) {

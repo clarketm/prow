@@ -29,10 +29,10 @@ import (
 	"sigs.k8s.io/yaml"
 
 	"k8s.io/apimachinery/pkg/util/sets"
-	"k8s.io/test-infra/prow/git"
-	"k8s.io/test-infra/prow/github"
+	"github.com/clarketm/prow/git"
+	"github.com/clarketm/prow/github"
 
-	prowConf "k8s.io/test-infra/prow/config"
+	prowConf "github.com/clarketm/prow/config"
 )
 
 const (

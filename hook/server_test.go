@@ -23,7 +23,7 @@ import (
 	"strings"
 	"testing"
 
-	"k8s.io/test-infra/prow/plugins"
+	"github.com/clarketm/prow/plugins"
 )
 
 func TestServeHTTPErrors(t *testing.T) {

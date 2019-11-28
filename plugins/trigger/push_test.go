@@ -24,12 +24,12 @@ import (
 
 	"k8s.io/apimachinery/pkg/api/equality"
 	"k8s.io/apimachinery/pkg/util/diff"
-	prowapi "k8s.io/test-infra/prow/apis/prowjobs/v1"
-	"k8s.io/test-infra/prow/client/clientset/versioned/fake"
-	"k8s.io/test-infra/prow/config"
-	"k8s.io/test-infra/prow/github"
+	prowapi "github.com/clarketm/prow/apis/prowjobs/v1"
+	"github.com/clarketm/prow/client/clientset/versioned/fake"
+	"github.com/clarketm/prow/config"
+	"github.com/clarketm/prow/github"
 
-	"k8s.io/test-infra/prow/github/fakegithub"
+	"github.com/clarketm/prow/github/fakegithub"
 )
 
 func TestCreateRefs(t *testing.T) {

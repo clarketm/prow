@@ -7,7 +7,7 @@ import (
 	"html/template"
 	"path/filepath"
 
-	"k8s.io/test-infra/prow/spyglass/lenses"
+	"github.com/clarketm/prow/spyglass/lenses"
 
 	"github.com/sirupsen/logrus"
 )

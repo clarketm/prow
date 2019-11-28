@@ -21,7 +21,7 @@ go_test(
 go_library(
     name = "go_default_library",
     srcs = ["golint.go"],
-    importpath = "k8s.io/test-infra/prow/plugins/golint",
+    importpath = "github.com/clarketm/prow/plugins/golint",
     deps = [
         "//prow/genfiles:go_default_library",
         "//prow/git:go_default_library",

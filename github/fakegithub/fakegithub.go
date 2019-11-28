@@ -21,7 +21,7 @@ import (
 	"regexp"
 
 	"k8s.io/apimachinery/pkg/util/sets"
-	"k8s.io/test-infra/prow/github"
+	"github.com/clarketm/prow/github"
 )
 
 const botName = "k8s-ci-robot"

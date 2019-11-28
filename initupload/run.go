@@ -26,10 +26,10 @@ import (
 	"strconv"
 	"time"
 
-	prowapi "k8s.io/test-infra/prow/apis/prowjobs/v1"
-	"k8s.io/test-infra/prow/pod-utils/clone"
-	"k8s.io/test-infra/prow/pod-utils/downwardapi"
-	"k8s.io/test-infra/prow/pod-utils/gcs"
+	prowapi "github.com/clarketm/prow/apis/prowjobs/v1"
+	"github.com/clarketm/prow/pod-utils/clone"
+	"github.com/clarketm/prow/pod-utils/downwardapi"
+	"github.com/clarketm/prow/pod-utils/gcs"
 )
 
 // specToStarted translate a jobspec into a started struct

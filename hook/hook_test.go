@@ -22,10 +22,10 @@ import (
 	"testing"
 	"time"
 
-	"k8s.io/test-infra/prow/config"
-	"k8s.io/test-infra/prow/github"
-	"k8s.io/test-infra/prow/phony"
-	"k8s.io/test-infra/prow/plugins"
+	"github.com/clarketm/prow/config"
+	"github.com/clarketm/prow/github"
+	"github.com/clarketm/prow/phony"
+	"github.com/clarketm/prow/plugins"
 )
 
 var ice = github.IssueCommentEvent{

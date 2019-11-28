@@ -33,7 +33,7 @@ go_library(
         "types.go",
         "webhooks.go",
     ],
-    importpath = "k8s.io/test-infra/prow/github",
+    importpath = "github.com/clarketm/prow/github",
     deps = [
         "//ghproxy/ghcache:go_default_library",
         "//prow/errorutil:go_default_library",

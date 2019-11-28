@@ -7,7 +7,7 @@ go_library(
         "options.go",
         "run.go",
     ],
-    importpath = "k8s.io/test-infra/prow/gcsupload",
+    importpath = "github.com/clarketm/prow/gcsupload",
     visibility = ["//visibility:public"],
     deps = [
         "//prow/apis/prowjobs/v1:go_default_library",

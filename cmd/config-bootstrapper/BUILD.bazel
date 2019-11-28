@@ -6,7 +6,7 @@ load("//prow:def.bzl", "prow_image")
 go_library(
     name = "go_default_library",
     srcs = ["main.go"],
-    importpath = "k8s.io/test-infra/prow/cmd/config-bootstrapper",
+    importpath = "github.com/clarketm/prow/cmd/config-bootstrapper",
     deps = [
         "//prow/config:go_default_library",
         "//prow/flagutil:go_default_library",

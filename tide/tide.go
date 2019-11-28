@@ -38,14 +38,14 @@ import (
 	ctrlruntimeclient "sigs.k8s.io/controller-runtime/pkg/client"
 
 	"k8s.io/test-infra/pkg/io"
-	prowapi "k8s.io/test-infra/prow/apis/prowjobs/v1"
-	"k8s.io/test-infra/prow/config"
-	"k8s.io/test-infra/prow/errorutil"
-	"k8s.io/test-infra/prow/git"
-	"k8s.io/test-infra/prow/github"
-	"k8s.io/test-infra/prow/pjutil"
-	"k8s.io/test-infra/prow/tide/blockers"
-	"k8s.io/test-infra/prow/tide/history"
+	prowapi "github.com/clarketm/prow/apis/prowjobs/v1"
+	"github.com/clarketm/prow/config"
+	"github.com/clarketm/prow/errorutil"
+	"github.com/clarketm/prow/git"
+	"github.com/clarketm/prow/github"
+	"github.com/clarketm/prow/pjutil"
+	"github.com/clarketm/prow/tide/blockers"
+	"github.com/clarketm/prow/tide/history"
 )
 
 // For mocking out sleep during unit tests.

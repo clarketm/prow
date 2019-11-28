@@ -24,10 +24,10 @@ import (
 	"github.com/sirupsen/logrus"
 	"k8s.io/apimachinery/pkg/labels"
 
-	v1 "k8s.io/test-infra/prow/apis/prowjobs/v1"
-	pjlister "k8s.io/test-infra/prow/client/listers/prowjobs/v1"
-	"k8s.io/test-infra/prow/gerrit/client"
-	"k8s.io/test-infra/prow/kube"
+	v1 "github.com/clarketm/prow/apis/prowjobs/v1"
+	pjlister "github.com/clarketm/prow/client/listers/prowjobs/v1"
+	"github.com/clarketm/prow/gerrit/client"
+	"github.com/clarketm/prow/kube"
 )
 
 const (

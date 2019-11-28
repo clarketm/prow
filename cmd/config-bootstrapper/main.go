@@ -25,13 +25,13 @@ import (
 	"github.com/sirupsen/logrus"
 	_ "k8s.io/client-go/plugin/pkg/client/auth/gcp" // support gcp users in .kube/config
 
-	"k8s.io/test-infra/prow/config"
-	prowflagutil "k8s.io/test-infra/prow/flagutil"
-	"k8s.io/test-infra/prow/github"
-	_ "k8s.io/test-infra/prow/hook/plugin-imports"
-	"k8s.io/test-infra/prow/logrusutil"
-	"k8s.io/test-infra/prow/plugins"
-	"k8s.io/test-infra/prow/plugins/updateconfig"
+	"github.com/clarketm/prow/config"
+	prowflagutil "github.com/clarketm/prow/flagutil"
+	"github.com/clarketm/prow/github"
+	_ "github.com/clarketm/prow/hook/plugin-imports"
+	"github.com/clarketm/prow/logrusutil"
+	"github.com/clarketm/prow/plugins"
+	"github.com/clarketm/prow/plugins/updateconfig"
 )
 
 type options struct {

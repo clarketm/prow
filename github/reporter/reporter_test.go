@@ -21,8 +21,8 @@ import (
 
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 
-	v1 "k8s.io/test-infra/prow/apis/prowjobs/v1"
-	"k8s.io/test-infra/prow/gerrit/client"
+	v1 "github.com/clarketm/prow/apis/prowjobs/v1"
+	"github.com/clarketm/prow/gerrit/client"
 )
 
 func TestShouldReport(t *testing.T) {

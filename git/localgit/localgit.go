@@ -26,7 +26,7 @@ import (
 	"path/filepath"
 	"strings"
 
-	"k8s.io/test-infra/prow/git"
+	"github.com/clarketm/prow/git"
 )
 
 // LocalGit stores the repos in a temp dir. Create with New and delete with

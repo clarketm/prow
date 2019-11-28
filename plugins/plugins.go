@@ -30,15 +30,15 @@ import (
 	corev1 "k8s.io/client-go/kubernetes/typed/core/v1"
 	"sigs.k8s.io/yaml"
 
-	"k8s.io/test-infra/prow/bugzilla"
-	prowv1 "k8s.io/test-infra/prow/client/clientset/versioned/typed/prowjobs/v1"
-	"k8s.io/test-infra/prow/commentpruner"
-	"k8s.io/test-infra/prow/config"
-	"k8s.io/test-infra/prow/git"
-	"k8s.io/test-infra/prow/github"
-	"k8s.io/test-infra/prow/pluginhelp"
-	"k8s.io/test-infra/prow/repoowners"
-	"k8s.io/test-infra/prow/slack"
+	"github.com/clarketm/prow/bugzilla"
+	prowv1 "github.com/clarketm/prow/client/clientset/versioned/typed/prowjobs/v1"
+	"github.com/clarketm/prow/commentpruner"
+	"github.com/clarketm/prow/config"
+	"github.com/clarketm/prow/git"
+	"github.com/clarketm/prow/github"
+	"github.com/clarketm/prow/pluginhelp"
+	"github.com/clarketm/prow/repoowners"
+	"github.com/clarketm/prow/slack"
 )
 
 var (

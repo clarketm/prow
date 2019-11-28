@@ -32,8 +32,8 @@ import (
 	"cloud.google.com/go/storage"
 	"github.com/sirupsen/logrus"
 	"google.golang.org/api/iterator"
-	"k8s.io/test-infra/prow/config"
-	"k8s.io/test-infra/prow/pod-utils/gcs"
+	"github.com/clarketm/prow/config"
+	"github.com/clarketm/prow/pod-utils/gcs"
 )
 
 const (

@@ -7,7 +7,7 @@ go_library(
         "status.go",
         "tide.go",
     ],
-    importpath = "k8s.io/test-infra/prow/tide",
+    importpath = "github.com/clarketm/prow/tide",
     visibility = ["//visibility:public"],
     deps = [
         "//pkg/io:go_default_library",

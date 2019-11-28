@@ -30,16 +30,16 @@ import (
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	"k8s.io/apimachinery/pkg/util/validation"
 
-	prowapi "k8s.io/test-infra/prow/apis/prowjobs/v1"
-	"k8s.io/test-infra/prow/clonerefs"
-	"k8s.io/test-infra/prow/entrypoint"
-	"k8s.io/test-infra/prow/gcsupload"
-	"k8s.io/test-infra/prow/initupload"
-	"k8s.io/test-infra/prow/kube"
-	"k8s.io/test-infra/prow/pod-utils/clone"
-	"k8s.io/test-infra/prow/pod-utils/downwardapi"
-	"k8s.io/test-infra/prow/pod-utils/wrapper"
-	"k8s.io/test-infra/prow/sidecar"
+	prowapi "github.com/clarketm/prow/apis/prowjobs/v1"
+	"github.com/clarketm/prow/clonerefs"
+	"github.com/clarketm/prow/entrypoint"
+	"github.com/clarketm/prow/gcsupload"
+	"github.com/clarketm/prow/initupload"
+	"github.com/clarketm/prow/kube"
+	"github.com/clarketm/prow/pod-utils/clone"
+	"github.com/clarketm/prow/pod-utils/downwardapi"
+	"github.com/clarketm/prow/pod-utils/wrapper"
+	"github.com/clarketm/prow/sidecar"
 )
 
 const (

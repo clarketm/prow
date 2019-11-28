@@ -6,7 +6,7 @@ go_library(
         "ingress.go",
         "main.go",
     ],
-    importpath = "k8s.io/test-infra/prow/cmd/tackle",
+    importpath = "github.com/clarketm/prow/cmd/tackle",
     visibility = ["//visibility:public"],
     deps = [
         "//prow/config/secret:go_default_library",

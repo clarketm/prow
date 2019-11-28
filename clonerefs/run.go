@@ -27,8 +27,8 @@ import (
 	"sync"
 
 	"github.com/sirupsen/logrus"
-	prowapi "k8s.io/test-infra/prow/apis/prowjobs/v1"
-	"k8s.io/test-infra/prow/pod-utils/clone"
+	prowapi "github.com/clarketm/prow/apis/prowjobs/v1"
+	"github.com/clarketm/prow/pod-utils/clone"
 )
 
 var cloneFunc = clone.Run

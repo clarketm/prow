@@ -23,9 +23,9 @@ import (
 	"time"
 
 	"k8s.io/apimachinery/pkg/util/sets"
-	"k8s.io/test-infra/prow/config"
-	"k8s.io/test-infra/prow/flagutil"
-	"k8s.io/test-infra/prow/plugins"
+	"github.com/clarketm/prow/config"
+	"github.com/clarketm/prow/flagutil"
+	"github.com/clarketm/prow/plugins"
 )
 
 // Make sure that our plugins are valid.

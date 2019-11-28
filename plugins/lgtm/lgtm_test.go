@@ -31,10 +31,10 @@ import (
 	"k8s.io/apimachinery/pkg/api/equality"
 	"k8s.io/apimachinery/pkg/util/sets"
 
-	"k8s.io/test-infra/prow/github"
-	"k8s.io/test-infra/prow/github/fakegithub"
-	"k8s.io/test-infra/prow/plugins"
-	"k8s.io/test-infra/prow/repoowners"
+	"github.com/clarketm/prow/github"
+	"github.com/clarketm/prow/github/fakegithub"
+	"github.com/clarketm/prow/plugins"
+	"github.com/clarketm/prow/repoowners"
 )
 
 type fakeOwnersClient struct {

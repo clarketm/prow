@@ -21,7 +21,7 @@ import (
 	"flag"
 	"fmt"
 	"io/ioutil"
-	"k8s.io/test-infra/prow/pjutil"
+	"github.com/clarketm/prow/pjutil"
 	"os"
 	"path"
 	"strings"
@@ -30,8 +30,8 @@ import (
 	v1 "k8s.io/api/core/v1"
 	"sigs.k8s.io/yaml"
 
-	prowapi "k8s.io/test-infra/prow/apis/prowjobs/v1"
-	"k8s.io/test-infra/prow/pod-utils/decorate"
+	prowapi "github.com/clarketm/prow/apis/prowjobs/v1"
+	"github.com/clarketm/prow/pod-utils/decorate"
 )
 
 type options struct {

@@ -20,7 +20,7 @@ go_test(
 go_library(
     name = "go_default_library",
     srcs = ["goose.go"],
-    importpath = "k8s.io/test-infra/prow/plugins/goose",
+    importpath = "github.com/clarketm/prow/plugins/goose",
     deps = [
         "//prow/github:go_default_library",
         "//prow/pluginhelp:go_default_library",

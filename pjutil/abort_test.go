@@ -26,8 +26,8 @@ import (
 	"k8s.io/apimachinery/pkg/util/sets"
 	clienttesting "k8s.io/client-go/testing"
 
-	prowjobv1 "k8s.io/test-infra/prow/apis/prowjobs/v1"
-	prowfake "k8s.io/test-infra/prow/client/clientset/versioned/fake"
+	prowjobv1 "github.com/clarketm/prow/apis/prowjobs/v1"
+	prowfake "github.com/clarketm/prow/client/clientset/versioned/fake"
 )
 
 func TestTerminateOlderJobs(t *testing.T) {

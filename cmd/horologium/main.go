@@ -27,14 +27,14 @@ import (
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	"k8s.io/apimachinery/pkg/labels"
 	"k8s.io/apimachinery/pkg/util/sets"
-	"k8s.io/test-infra/prow/interrupts"
+	"github.com/clarketm/prow/interrupts"
 
-	prowapi "k8s.io/test-infra/prow/apis/prowjobs/v1"
-	"k8s.io/test-infra/prow/config"
-	"k8s.io/test-infra/prow/cron"
-	"k8s.io/test-infra/prow/flagutil"
-	"k8s.io/test-infra/prow/logrusutil"
-	"k8s.io/test-infra/prow/pjutil"
+	prowapi "github.com/clarketm/prow/apis/prowjobs/v1"
+	"github.com/clarketm/prow/config"
+	"github.com/clarketm/prow/cron"
+	"github.com/clarketm/prow/flagutil"
+	"github.com/clarketm/prow/logrusutil"
+	"github.com/clarketm/prow/pjutil"
 )
 
 type options struct {

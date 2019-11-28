@@ -6,7 +6,7 @@ go_library(
         "doc.go",
         "load.go",
     ],
-    importpath = "k8s.io/test-infra/prow/pod-utils/options",
+    importpath = "github.com/clarketm/prow/pod-utils/options",
     visibility = ["//visibility:public"],
 )
 

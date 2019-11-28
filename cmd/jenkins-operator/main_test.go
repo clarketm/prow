@@ -19,7 +19,7 @@ package main
 import (
 	"testing"
 
-	"k8s.io/test-infra/prow/flagutil"
+	"github.com/clarketm/prow/flagutil"
 )
 
 func TestOptions_Validate(t *testing.T) {

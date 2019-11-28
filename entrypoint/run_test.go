@@ -25,7 +25,7 @@ import (
 	"time"
 
 	"github.com/sirupsen/logrus"
-	"k8s.io/test-infra/prow/pod-utils/wrapper"
+	"github.com/clarketm/prow/pod-utils/wrapper"
 )
 
 func TestOptions_Run(t *testing.T) {

@@ -6,7 +6,7 @@ go_library(
         "gitattributes.go",
         "pattern.go",
     ],
-    importpath = "k8s.io/test-infra/prow/gitattributes",
+    importpath = "github.com/clarketm/prow/gitattributes",
     visibility = ["//visibility:public"],
     deps = [
         "//prow/github:go_default_library",

@@ -21,7 +21,7 @@ go_test(
 go_library(
     name = "go_default_library",
     srcs = ["cla.go"],
-    importpath = "k8s.io/test-infra/prow/plugins/cla",
+    importpath = "github.com/clarketm/prow/plugins/cla",
     deps = [
         "//prow/github:go_default_library",
         "//prow/labels:go_default_library",

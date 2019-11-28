@@ -32,11 +32,11 @@ import (
 	core "k8s.io/client-go/kubernetes/typed/core/v1"
 	"k8s.io/client-go/tools/cache"
 	"k8s.io/client-go/util/workqueue"
-	prowv1 "k8s.io/test-infra/prow/client/clientset/versioned/typed/prowjobs/v1"
-	"k8s.io/test-infra/prow/gcsupload"
-	"k8s.io/test-infra/prow/kube"
-	"k8s.io/test-infra/prow/pod-utils/downwardapi"
-	"k8s.io/test-infra/prow/pod-utils/gcs"
+	prowv1 "github.com/clarketm/prow/client/clientset/versioned/typed/prowjobs/v1"
+	"github.com/clarketm/prow/gcsupload"
+	"github.com/clarketm/prow/kube"
+	"github.com/clarketm/prow/pod-utils/downwardapi"
+	"github.com/clarketm/prow/pod-utils/gcs"
 )
 
 const (

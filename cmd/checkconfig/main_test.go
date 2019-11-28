@@ -27,12 +27,12 @@ import (
 	"k8s.io/apimachinery/pkg/util/sets"
 	"sigs.k8s.io/yaml"
 
-	prowapi "k8s.io/test-infra/prow/apis/prowjobs/v1"
-	"k8s.io/test-infra/prow/config"
-	"k8s.io/test-infra/prow/errorutil"
-	"k8s.io/test-infra/prow/flagutil"
-	"k8s.io/test-infra/prow/github"
-	"k8s.io/test-infra/prow/plugins"
+	prowapi "github.com/clarketm/prow/apis/prowjobs/v1"
+	"github.com/clarketm/prow/config"
+	"github.com/clarketm/prow/errorutil"
+	"github.com/clarketm/prow/flagutil"
+	"github.com/clarketm/prow/github"
+	"github.com/clarketm/prow/plugins"
 )
 
 func TestEnsureValidConfiguration(t *testing.T) {

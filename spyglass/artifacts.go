@@ -22,7 +22,7 @@ import (
 	"time"
 
 	"github.com/sirupsen/logrus"
-	"k8s.io/test-infra/prow/spyglass/lenses"
+	"github.com/clarketm/prow/spyglass/lenses"
 )
 
 // ListArtifacts gets the names of all artifacts available from the given source

@@ -25,9 +25,9 @@ import (
 	"github.com/sirupsen/logrus"
 	cron "gopkg.in/robfig/cron.v2" // using v2 api, doc at https://godoc.org/gopkg.in/robfig/cron.v2
 	"k8s.io/apimachinery/pkg/util/sets"
-	"k8s.io/test-infra/prow/errorutil"
+	"github.com/clarketm/prow/errorutil"
 
-	"k8s.io/test-infra/prow/config"
+	"github.com/clarketm/prow/config"
 )
 
 // jobStatus is a cache layer for tracking existing cron jobs

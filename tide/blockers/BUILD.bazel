@@ -3,7 +3,7 @@ load("@io_bazel_rules_go//go:def.bzl", "go_library", "go_test")
 go_library(
     name = "go_default_library",
     srcs = ["blockers.go"],
-    importpath = "k8s.io/test-infra/prow/tide/blockers",
+    importpath = "github.com/clarketm/prow/tide/blockers",
     visibility = ["//visibility:public"],
     deps = [
         "@com_github_shurcool_githubv4//:go_default_library",

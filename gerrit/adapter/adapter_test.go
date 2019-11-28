@@ -24,13 +24,13 @@ import (
 	"github.com/andygrunwald/go-gerrit"
 
 	clienttesting "k8s.io/client-go/testing"
-	"k8s.io/test-infra/prow/gerrit/client"
+	"github.com/clarketm/prow/gerrit/client"
 
 	"k8s.io/apimachinery/pkg/api/equality"
 	"k8s.io/apimachinery/pkg/util/diff"
-	prowapi "k8s.io/test-infra/prow/apis/prowjobs/v1"
-	prowfake "k8s.io/test-infra/prow/client/clientset/versioned/fake"
-	"k8s.io/test-infra/prow/config"
+	prowapi "github.com/clarketm/prow/apis/prowjobs/v1"
+	prowfake "github.com/clarketm/prow/client/clientset/versioned/fake"
+	"github.com/clarketm/prow/config"
 )
 
 func makeStamp(t time.Time) gerrit.Timestamp {

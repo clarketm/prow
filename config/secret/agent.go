@@ -27,7 +27,7 @@ import (
 
 	"k8s.io/apimachinery/pkg/util/sets"
 
-	"k8s.io/test-infra/prow/logrusutil"
+	"github.com/clarketm/prow/logrusutil"
 )
 
 // Agent watches a path and automatically loads the secrets stored.

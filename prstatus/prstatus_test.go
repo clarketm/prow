@@ -32,9 +32,9 @@ import (
 	"github.com/sirupsen/logrus"
 	"sigs.k8s.io/yaml"
 
-	prowflagutil "k8s.io/test-infra/prow/flagutil"
-	"k8s.io/test-infra/prow/github"
-	"k8s.io/test-infra/prow/githuboauth"
+	prowflagutil "github.com/clarketm/prow/flagutil"
+	"github.com/clarketm/prow/github"
+	"github.com/clarketm/prow/githuboauth"
 )
 
 type MockQueryHandler struct {

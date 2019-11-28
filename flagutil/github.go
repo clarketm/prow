@@ -27,10 +27,10 @@ import (
 	"golang.org/x/oauth2"
 
 	"k8s.io/test-infra/pkg/ghclient"
-	"k8s.io/test-infra/prow/config/secret"
-	"k8s.io/test-infra/prow/git"
-	"k8s.io/test-infra/prow/github"
-	"k8s.io/test-infra/prow/githuboauth"
+	"github.com/clarketm/prow/config/secret"
+	"github.com/clarketm/prow/git"
+	"github.com/clarketm/prow/github"
+	"github.com/clarketm/prow/githuboauth"
 )
 
 // GitHubOptions holds options for interacting with GitHub.

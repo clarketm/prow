@@ -21,7 +21,7 @@ import (
 	"fmt"
 	"time"
 
-	"k8s.io/test-infra/prow/github"
+	"github.com/clarketm/prow/github"
 
 	githubql "github.com/shurcooL/githubv4"
 	"github.com/sirupsen/logrus"

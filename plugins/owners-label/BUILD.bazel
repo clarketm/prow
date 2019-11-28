@@ -3,7 +3,7 @@ load("@io_bazel_rules_go//go:def.bzl", "go_library", "go_test")
 go_library(
     name = "go_default_library",
     srcs = ["owners-label.go"],
-    importpath = "k8s.io/test-infra/prow/plugins/owners-label",
+    importpath = "github.com/clarketm/prow/plugins/owners-label",
     visibility = ["//visibility:public"],
     deps = [
         "//prow/github:go_default_library",

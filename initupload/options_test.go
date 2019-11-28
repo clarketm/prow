@@ -19,8 +19,8 @@ package initupload
 import (
 	"testing"
 
-	prowapi "k8s.io/test-infra/prow/apis/prowjobs/v1"
-	"k8s.io/test-infra/prow/gcsupload"
+	prowapi "github.com/clarketm/prow/apis/prowjobs/v1"
+	"github.com/clarketm/prow/gcsupload"
 )
 
 func TestOptions_Validate(t *testing.T) {

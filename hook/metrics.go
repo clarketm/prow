@@ -18,7 +18,7 @@ package hook
 
 import (
 	"github.com/prometheus/client_golang/prometheus"
-	"k8s.io/test-infra/prow/plugins"
+	"github.com/clarketm/prow/plugins"
 )
 
 var (

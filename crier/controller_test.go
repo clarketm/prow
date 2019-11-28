@@ -28,10 +28,10 @@ import (
 	"k8s.io/apimachinery/pkg/runtime/schema"
 	"k8s.io/apimachinery/pkg/util/wait"
 	"k8s.io/client-go/tools/cache"
-	prowv1 "k8s.io/test-infra/prow/apis/prowjobs/v1"
-	"k8s.io/test-infra/prow/client/clientset/versioned/fake"
-	prowLister "k8s.io/test-infra/prow/client/listers/prowjobs/v1"
-	"k8s.io/test-infra/prow/kube"
+	prowv1 "github.com/clarketm/prow/apis/prowjobs/v1"
+	"github.com/clarketm/prow/client/clientset/versioned/fake"
+	prowLister "github.com/clarketm/prow/client/listers/prowjobs/v1"
+	"github.com/clarketm/prow/kube"
 )
 
 const (

@@ -31,12 +31,12 @@ import (
 	apierrors "k8s.io/apimachinery/pkg/api/errors"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	"k8s.io/apimachinery/pkg/util/diff"
-	"k8s.io/test-infra/prow/config"
+	"github.com/clarketm/prow/config"
 
-	prowjobv1 "k8s.io/test-infra/prow/apis/prowjobs/v1"
-	"k8s.io/test-infra/prow/kube"
-	"k8s.io/test-infra/prow/pod-utils/decorate"
-	"k8s.io/test-infra/prow/pod-utils/downwardapi"
+	prowjobv1 "github.com/clarketm/prow/apis/prowjobs/v1"
+	"github.com/clarketm/prow/kube"
+	"github.com/clarketm/prow/pod-utils/decorate"
+	"github.com/clarketm/prow/pod-utils/downwardapi"
 
 	"knative.dev/pkg/apis"
 	duckv1beta1 "knative.dev/pkg/apis/duck/v1beta1"

@@ -19,8 +19,8 @@ package hook
 import (
 	"github.com/sirupsen/logrus"
 
-	"k8s.io/test-infra/prow/github"
-	"k8s.io/test-infra/prow/plugins"
+	"github.com/clarketm/prow/github"
+	"github.com/clarketm/prow/plugins"
 )
 
 const failedCommentCoerceFmt = "Could not coerce %s event to a GenericCommentEvent. Unknown 'action': %q."

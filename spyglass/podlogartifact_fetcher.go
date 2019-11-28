@@ -19,7 +19,7 @@ package spyglass
 import (
 	"fmt"
 
-	"k8s.io/test-infra/prow/spyglass/lenses"
+	"github.com/clarketm/prow/spyglass/lenses"
 )
 
 // PodLogArtifactFetcher is used to fetch artifacts from k8s apiserver

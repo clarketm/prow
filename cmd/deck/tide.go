@@ -26,10 +26,10 @@ import (
 
 	"github.com/sirupsen/logrus"
 
-	"k8s.io/test-infra/prow/config"
-	"k8s.io/test-infra/prow/errorutil"
-	"k8s.io/test-infra/prow/tide"
-	"k8s.io/test-infra/prow/tide/history"
+	"github.com/clarketm/prow/config"
+	"github.com/clarketm/prow/errorutil"
+	"github.com/clarketm/prow/tide"
+	"github.com/clarketm/prow/tide/history"
 )
 
 type tidePools struct {

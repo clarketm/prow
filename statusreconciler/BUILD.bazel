@@ -6,7 +6,7 @@ go_library(
         "controller.go",
         "doc.go",
     ],
-    importpath = "k8s.io/test-infra/prow/statusreconciler",
+    importpath = "github.com/clarketm/prow/statusreconciler",
     visibility = ["//visibility:public"],
     deps = [
         "//maintenance/migratestatus/migrator:go_default_library",

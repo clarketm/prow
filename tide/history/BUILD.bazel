@@ -3,7 +3,7 @@ load("@io_bazel_rules_go//go:def.bzl", "go_library", "go_test")
 go_library(
     name = "go_default_library",
     srcs = ["history.go"],
-    importpath = "k8s.io/test-infra/prow/tide/history",
+    importpath = "github.com/clarketm/prow/tide/history",
     visibility = ["//visibility:public"],
     deps = [
         "//pkg/io:go_default_library",

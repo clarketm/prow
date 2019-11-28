@@ -28,8 +28,8 @@ import (
 	"strings"
 	"testing"
 
-	"k8s.io/test-infra/prow/entrypoint"
-	"k8s.io/test-infra/prow/pod-utils/wrapper"
+	"github.com/clarketm/prow/entrypoint"
+	"github.com/clarketm/prow/pod-utils/wrapper"
 
 	"k8s.io/apimachinery/pkg/api/equality"
 	"k8s.io/apimachinery/pkg/util/diff"

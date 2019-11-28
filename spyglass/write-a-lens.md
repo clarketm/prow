@@ -22,7 +22,7 @@ package samplelens
 import (
 	"encoding/json"
 	
-	"k8s.io/test-infra/prow/spyglass/lenses"
+	"github.com/clarketm/prow/spyglass/lenses"
 )
 
 type Lens struct{}
@@ -64,7 +64,7 @@ this by `import`ing it from [`prow/cmd/deck/main.go`](../cmd/deck/main.go), alon
 ```go
 import (
 	// ...
-	_ "k8s.io/test-infra/prow/spyglass/lenses/samplelens"
+	_ "github.com/clarketm/prow/spyglass/lenses/samplelens"
 )
 ```
 

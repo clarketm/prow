@@ -27,9 +27,9 @@ import (
 	"k8s.io/apimachinery/pkg/util/diff"
 	"sigs.k8s.io/yaml"
 
-	"k8s.io/test-infra/prow/config"
-	"k8s.io/test-infra/prow/flagutil"
-	"k8s.io/test-infra/prow/github"
+	"github.com/clarketm/prow/config"
+	"github.com/clarketm/prow/flagutil"
+	"github.com/clarketm/prow/github"
 )
 
 func TestOptions_Validate(t *testing.T) {

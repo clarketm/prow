@@ -28,12 +28,12 @@ import (
 	"k8s.io/apimachinery/pkg/util/sets"
 	"sigs.k8s.io/yaml"
 
-	"k8s.io/test-infra/prow/config/org"
-	"k8s.io/test-infra/prow/config/secret"
-	"k8s.io/test-infra/prow/errorutil"
-	"k8s.io/test-infra/prow/flagutil"
-	"k8s.io/test-infra/prow/github"
-	"k8s.io/test-infra/prow/logrusutil"
+	"github.com/clarketm/prow/config/org"
+	"github.com/clarketm/prow/config/secret"
+	"github.com/clarketm/prow/errorutil"
+	"github.com/clarketm/prow/flagutil"
+	"github.com/clarketm/prow/github"
+	"github.com/clarketm/prow/logrusutil"
 )
 
 const (

@@ -26,9 +26,9 @@ import (
 	"k8s.io/client-go/kubernetes"
 	corev1 "k8s.io/client-go/kubernetes/typed/core/v1"
 	"k8s.io/client-go/rest"
-	prow "k8s.io/test-infra/prow/client/clientset/versioned"
-	prowv1 "k8s.io/test-infra/prow/client/clientset/versioned/typed/prowjobs/v1"
-	"k8s.io/test-infra/prow/kube"
+	prow "github.com/clarketm/prow/client/clientset/versioned"
+	prowv1 "github.com/clarketm/prow/client/clientset/versioned/typed/prowjobs/v1"
+	"github.com/clarketm/prow/kube"
 )
 
 // KubernetesOptions holds options for interacting with Kubernetes.

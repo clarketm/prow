@@ -40,9 +40,9 @@ import (
 	"k8s.io/client-go/tools/clientcmd"
 	clientcmdapi "k8s.io/client-go/tools/clientcmd/api"
 
-	"k8s.io/test-infra/prow/config/secret"
-	"k8s.io/test-infra/prow/flagutil"
-	"k8s.io/test-infra/prow/github"
+	"github.com/clarketm/prow/config/secret"
+	"github.com/clarketm/prow/flagutil"
+	"github.com/clarketm/prow/github"
 
 	_ "k8s.io/client-go/plugin/pkg/client/auth/gcp" // for gcp auth provider
 )

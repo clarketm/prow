@@ -32,11 +32,11 @@ import (
 	"k8s.io/client-go/kubernetes/fake"
 	clienttesting "k8s.io/client-go/testing"
 
-	"k8s.io/test-infra/prow/git"
-	"k8s.io/test-infra/prow/git/localgit"
-	"k8s.io/test-infra/prow/github"
-	"k8s.io/test-infra/prow/github/fakegithub"
-	"k8s.io/test-infra/prow/plugins"
+	"github.com/clarketm/prow/git"
+	"github.com/clarketm/prow/git/localgit"
+	"github.com/clarketm/prow/github"
+	"github.com/clarketm/prow/github/fakegithub"
+	"github.com/clarketm/prow/plugins"
 )
 
 const defaultNamespace = "default"

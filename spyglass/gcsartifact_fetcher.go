@@ -34,7 +34,7 @@ import (
 	"google.golang.org/api/iterator"
 
 	"github.com/GoogleCloudPlatform/testgrid/util/gcs"
-	"k8s.io/test-infra/prow/spyglass/lenses"
+	"github.com/clarketm/prow/spyglass/lenses"
 )
 
 const (

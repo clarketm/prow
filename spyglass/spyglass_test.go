@@ -26,8 +26,8 @@ import (
 	"strings"
 	"testing"
 
-	"k8s.io/test-infra/prow/gcsupload"
-	"k8s.io/test-infra/prow/pod-utils/downwardapi"
+	"github.com/clarketm/prow/gcsupload"
+	"github.com/clarketm/prow/pod-utils/downwardapi"
 
 	"github.com/fsouza/fake-gcs-server/fakestorage"
 	"github.com/sirupsen/logrus"
@@ -35,11 +35,11 @@ import (
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 
 	tgconf "github.com/GoogleCloudPlatform/testgrid/pb/config"
-	prowapi "k8s.io/test-infra/prow/apis/prowjobs/v1"
-	"k8s.io/test-infra/prow/config"
-	"k8s.io/test-infra/prow/deck/jobs"
-	"k8s.io/test-infra/prow/kube"
-	"k8s.io/test-infra/prow/spyglass/lenses"
+	prowapi "github.com/clarketm/prow/apis/prowjobs/v1"
+	"github.com/clarketm/prow/config"
+	"github.com/clarketm/prow/deck/jobs"
+	"github.com/clarketm/prow/kube"
+	"github.com/clarketm/prow/spyglass/lenses"
 )
 
 var (

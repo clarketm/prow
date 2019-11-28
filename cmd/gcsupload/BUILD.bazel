@@ -4,7 +4,7 @@ load("//prow:def.bzl", "prow_image")
 go_library(
     name = "go_default_library",
     srcs = ["main.go"],
-    importpath = "k8s.io/test-infra/prow/cmd/gcsupload",
+    importpath = "github.com/clarketm/prow/cmd/gcsupload",
     visibility = ["//visibility:private"],
     deps = [
         "//prow/gcsupload:go_default_library",

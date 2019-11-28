@@ -38,7 +38,7 @@ import (
 	"github.com/sirupsen/logrus"
 	"golang.org/x/oauth2"
 	"k8s.io/test-infra/ghproxy/ghcache"
-	"k8s.io/test-infra/prow/errorutil"
+	"github.com/clarketm/prow/errorutil"
 )
 
 type timeClient interface {

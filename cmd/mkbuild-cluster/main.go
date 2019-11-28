@@ -29,7 +29,7 @@ import (
 	"strings"
 
 	"k8s.io/test-infra/gencred/pkg/certificate"
-	"k8s.io/test-infra/prow/kube"
+	"github.com/clarketm/prow/kube"
 
 	"github.com/sirupsen/logrus"
 	coreapi "k8s.io/api/core/v1"

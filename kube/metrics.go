@@ -19,7 +19,7 @@ package kube
 import (
 	"github.com/prometheus/client_golang/prometheus"
 
-	prowapi "k8s.io/test-infra/prow/apis/prowjobs/v1"
+	prowapi "github.com/clarketm/prow/apis/prowjobs/v1"
 )
 
 var (

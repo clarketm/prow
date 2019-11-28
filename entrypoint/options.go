@@ -22,7 +22,7 @@ import (
 	"flag"
 	"time"
 
-	"k8s.io/test-infra/prow/pod-utils/wrapper"
+	"github.com/clarketm/prow/pod-utils/wrapper"
 )
 
 // NewOptions returns an empty Options with no nil fields

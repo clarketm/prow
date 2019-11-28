@@ -29,8 +29,8 @@ import (
 
 	"k8s.io/apimachinery/pkg/util/sets"
 
-	prowapi "k8s.io/test-infra/prow/apis/prowjobs/v1"
-	"k8s.io/test-infra/prow/logrusutil"
+	prowapi "github.com/clarketm/prow/apis/prowjobs/v1"
+	"github.com/clarketm/prow/logrusutil"
 )
 
 // Run clones the refs under the prescribed directory and optionally

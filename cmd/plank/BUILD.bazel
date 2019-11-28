@@ -18,7 +18,7 @@ go_binary(
 go_library(
     name = "go_default_library",
     srcs = ["main.go"],
-    importpath = "k8s.io/test-infra/prow/cmd/plank",
+    importpath = "github.com/clarketm/prow/cmd/plank",
     deps = [
         "//pkg/flagutil:go_default_library",
         "//prow/config:go_default_library",

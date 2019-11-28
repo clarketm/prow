@@ -31,13 +31,13 @@ import (
 	"github.com/sirupsen/logrus"
 
 	"k8s.io/test-infra/pkg/io"
-	"k8s.io/test-infra/prow/config"
-	prowflagutil "k8s.io/test-infra/prow/flagutil"
-	"k8s.io/test-infra/prow/gerrit/adapter"
-	"k8s.io/test-infra/prow/gerrit/client"
-	"k8s.io/test-infra/prow/interrupts"
-	"k8s.io/test-infra/prow/logrusutil"
-	"k8s.io/test-infra/prow/pjutil"
+	"github.com/clarketm/prow/config"
+	prowflagutil "github.com/clarketm/prow/flagutil"
+	"github.com/clarketm/prow/gerrit/adapter"
+	"github.com/clarketm/prow/gerrit/client"
+	"github.com/clarketm/prow/interrupts"
+	"github.com/clarketm/prow/logrusutil"
+	"github.com/clarketm/prow/pjutil"
 )
 
 type options struct {

@@ -23,7 +23,7 @@ go_test(
 go_library(
     name = "go_default_library",
     srcs = ["help.go"],
-    importpath = "k8s.io/test-infra/prow/plugins/help",
+    importpath = "github.com/clarketm/prow/plugins/help",
     deps = [
         "//prow/github:go_default_library",
         "//prow/labels:go_default_library",

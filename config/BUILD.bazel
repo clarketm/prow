@@ -49,7 +49,7 @@ go_library(
         "jobs.go",
         "tide.go",
     ],
-    importpath = "k8s.io/test-infra/prow/config",
+    importpath = "github.com/clarketm/prow/config",
     deps = [
         "//prow/apis/prowjobs/v1:go_default_library",
         "//prow/git:go_default_library",

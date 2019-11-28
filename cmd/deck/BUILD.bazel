@@ -104,7 +104,7 @@ go_library(
         "templates.go",
         "tide.go",
     ],
-    importpath = "k8s.io/test-infra/prow/cmd/deck",
+    importpath = "github.com/clarketm/prow/cmd/deck",
     deps = [
         "//prow/apis/prowjobs/v1:go_default_library",
         "//prow/client/clientset/versioned/typed/prowjobs/v1:go_default_library",

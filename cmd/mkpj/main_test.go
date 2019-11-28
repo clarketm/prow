@@ -19,9 +19,9 @@ package main
 import (
 	"testing"
 
-	prowapi "k8s.io/test-infra/prow/apis/prowjobs/v1"
-	"k8s.io/test-infra/prow/github"
-	"k8s.io/test-infra/prow/github/fakegithub"
+	prowapi "github.com/clarketm/prow/apis/prowjobs/v1"
+	"github.com/clarketm/prow/github"
+	"github.com/clarketm/prow/github/fakegithub"
 )
 
 func TestOptions_Validate(t *testing.T) {

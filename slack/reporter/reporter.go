@@ -24,10 +24,10 @@ import (
 
 	"github.com/sirupsen/logrus"
 
-	prowapi "k8s.io/test-infra/prow/apis/prowjobs/v1"
-	v1 "k8s.io/test-infra/prow/apis/prowjobs/v1"
-	"k8s.io/test-infra/prow/config"
-	slackclient "k8s.io/test-infra/prow/slack"
+	prowapi "github.com/clarketm/prow/apis/prowjobs/v1"
+	v1 "github.com/clarketm/prow/apis/prowjobs/v1"
+	"github.com/clarketm/prow/config"
+	slackclient "github.com/clarketm/prow/slack"
 )
 
 const reporterName = "slackreporter"

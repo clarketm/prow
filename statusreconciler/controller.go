@@ -24,15 +24,15 @@ import (
 
 	"github.com/sirupsen/logrus"
 	"k8s.io/apimachinery/pkg/util/sets"
-	prowv1 "k8s.io/test-infra/prow/client/clientset/versioned/typed/prowjobs/v1"
-	"k8s.io/test-infra/prow/pjutil"
+	prowv1 "github.com/clarketm/prow/client/clientset/versioned/typed/prowjobs/v1"
+	"github.com/clarketm/prow/pjutil"
 
 	"k8s.io/test-infra/maintenance/migratestatus/migrator"
-	"k8s.io/test-infra/prow/config"
-	"k8s.io/test-infra/prow/errorutil"
-	"k8s.io/test-infra/prow/github"
-	"k8s.io/test-infra/prow/plugins"
-	"k8s.io/test-infra/prow/plugins/trigger"
+	"github.com/clarketm/prow/config"
+	"github.com/clarketm/prow/errorutil"
+	"github.com/clarketm/prow/github"
+	"github.com/clarketm/prow/plugins"
+	"github.com/clarketm/prow/plugins/trigger"
 )
 
 // NewController constructs a new controller to reconcile stauses on config change

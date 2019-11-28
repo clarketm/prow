@@ -22,7 +22,7 @@ import (
 	"net/http/pprof"
 	"time"
 
-	"k8s.io/test-infra/prow/interrupts"
+	"github.com/clarketm/prow/interrupts"
 )
 
 // ServePProf sets up a handler for pprof debug endpoints and starts a server for them asynchronously.

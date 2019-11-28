@@ -12,7 +12,7 @@ go_library(
         "admission.go",
         "main.go",
     ],
-    importpath = "k8s.io/test-infra/prow/cmd/admission",
+    importpath = "github.com/clarketm/prow/cmd/admission",
     visibility = ["//visibility:private"],
     deps = [
         "//prow/apis/prowjobs/v1:go_default_library",

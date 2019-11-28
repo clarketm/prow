@@ -25,11 +25,11 @@ import (
 	"github.com/sirupsen/logrus"
 	"k8s.io/apimachinery/pkg/util/sets"
 
-	"k8s.io/test-infra/prow/github"
-	"k8s.io/test-infra/prow/labels"
-	"k8s.io/test-infra/prow/pluginhelp"
-	"k8s.io/test-infra/prow/plugins"
-	"k8s.io/test-infra/prow/repoowners"
+	"github.com/clarketm/prow/github"
+	"github.com/clarketm/prow/labels"
+	"github.com/clarketm/prow/pluginhelp"
+	"github.com/clarketm/prow/plugins"
+	"github.com/clarketm/prow/repoowners"
 )
 
 const (

@@ -28,9 +28,9 @@ import (
 	githubql "github.com/shurcooL/githubv4"
 	"github.com/sirupsen/logrus"
 
-	"k8s.io/test-infra/prow/github"
-	"k8s.io/test-infra/prow/labels"
-	"k8s.io/test-infra/prow/plugins"
+	"github.com/clarketm/prow/github"
+	"github.com/clarketm/prow/labels"
+	"github.com/clarketm/prow/plugins"
 )
 
 func testKey(org, repo string, num int) string {

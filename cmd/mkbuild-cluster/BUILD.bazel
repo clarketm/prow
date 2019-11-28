@@ -3,7 +3,7 @@ load("@io_bazel_rules_go//go:def.bzl", "go_binary", "go_library", "go_test")
 go_library(
     name = "go_default_library",
     srcs = ["main.go"],
-    importpath = "k8s.io/test-infra/prow/cmd/mkbuild-cluster",
+    importpath = "github.com/clarketm/prow/cmd/mkbuild-cluster",
     visibility = ["//visibility:private"],
     deps = [
         "//gencred/pkg/certificate:go_default_library",

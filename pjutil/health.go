@@ -23,7 +23,7 @@ import (
 	"strconv"
 	"time"
 
-	"k8s.io/test-infra/prow/interrupts"
+	"github.com/clarketm/prow/interrupts"
 )
 
 const healthPort = 8081

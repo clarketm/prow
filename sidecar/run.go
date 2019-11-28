@@ -31,10 +31,10 @@ import (
 
 	"github.com/sirupsen/logrus"
 
-	"k8s.io/test-infra/prow/entrypoint"
-	"k8s.io/test-infra/prow/pod-utils/downwardapi"
-	"k8s.io/test-infra/prow/pod-utils/gcs"
-	"k8s.io/test-infra/prow/pod-utils/wrapper"
+	"github.com/clarketm/prow/entrypoint"
+	"github.com/clarketm/prow/pod-utils/downwardapi"
+	"github.com/clarketm/prow/pod-utils/gcs"
+	"github.com/clarketm/prow/pod-utils/wrapper"
 )
 
 func nameEntry(idx int, opt wrapper.Options) string {

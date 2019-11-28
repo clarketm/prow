@@ -3,7 +3,7 @@ load("@io_bazel_rules_go//go:def.bzl", "go_library")
 go_library(
     name = "go_default_library",
     srcs = ["plugin-imports.go"],
-    importpath = "k8s.io/test-infra/prow/hook/plugin-imports",
+    importpath = "github.com/clarketm/prow/hook/plugin-imports",
     visibility = ["//visibility:public"],
     deps = [
         "//prow/plugins/approve:go_default_library",

@@ -28,7 +28,7 @@ import (
 
 	"github.com/sirupsen/logrus"
 
-	"k8s.io/test-infra/prow/pluginhelp"
+	"github.com/clarketm/prow/pluginhelp"
 )
 
 // ExternalPluginHelpProvider is a func type that returns a PluginHelp struct for an external

@@ -27,11 +27,11 @@ import (
 	"k8s.io/client-go/rest"
 	"k8s.io/client-go/tools/clientcmd"
 
-	artifact_uploader "k8s.io/test-infra/prow/artifact-uploader"
-	prow "k8s.io/test-infra/prow/client/clientset/versioned"
-	"k8s.io/test-infra/prow/gcsupload"
-	"k8s.io/test-infra/prow/logrusutil"
-	"k8s.io/test-infra/prow/pod-utils/options"
+	artifact_uploader "github.com/clarketm/prow/artifact-uploader"
+	prow "github.com/clarketm/prow/client/clientset/versioned"
+	"github.com/clarketm/prow/gcsupload"
+	"github.com/clarketm/prow/logrusutil"
+	"github.com/clarketm/prow/pod-utils/options"
 )
 
 // newOptions returns an empty Options with no nil fields

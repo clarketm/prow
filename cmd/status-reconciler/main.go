@@ -23,16 +23,16 @@ import (
 
 	"github.com/sirupsen/logrus"
 	"k8s.io/apimachinery/pkg/util/sets"
-	"k8s.io/test-infra/prow/interrupts"
+	"github.com/clarketm/prow/interrupts"
 
 	"k8s.io/test-infra/pkg/flagutil"
-	"k8s.io/test-infra/prow/config"
-	"k8s.io/test-infra/prow/config/secret"
-	prowflagutil "k8s.io/test-infra/prow/flagutil"
-	"k8s.io/test-infra/prow/logrusutil"
-	"k8s.io/test-infra/prow/pjutil"
-	"k8s.io/test-infra/prow/plugins"
-	"k8s.io/test-infra/prow/statusreconciler"
+	"github.com/clarketm/prow/config"
+	"github.com/clarketm/prow/config/secret"
+	prowflagutil "github.com/clarketm/prow/flagutil"
+	"github.com/clarketm/prow/logrusutil"
+	"github.com/clarketm/prow/pjutil"
+	"github.com/clarketm/prow/plugins"
+	"github.com/clarketm/prow/statusreconciler"
 )
 
 const (

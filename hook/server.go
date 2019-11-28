@@ -29,10 +29,10 @@ import (
 
 	"github.com/sirupsen/logrus"
 
-	"k8s.io/test-infra/prow/config"
-	"k8s.io/test-infra/prow/github"
-	_ "k8s.io/test-infra/prow/hook/plugin-imports"
-	"k8s.io/test-infra/prow/plugins"
+	"github.com/clarketm/prow/config"
+	"github.com/clarketm/prow/github"
+	_ "github.com/clarketm/prow/hook/plugin-imports"
+	"github.com/clarketm/prow/plugins"
 )
 
 // Server implements http.Handler. It validates incoming GitHub webhooks and

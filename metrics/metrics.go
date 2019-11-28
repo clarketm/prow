@@ -26,8 +26,8 @@ import (
 	"github.com/prometheus/client_golang/prometheus/promhttp"
 	"github.com/sirupsen/logrus"
 
-	"k8s.io/test-infra/prow/config"
-	"k8s.io/test-infra/prow/interrupts"
+	"github.com/clarketm/prow/config"
+	"github.com/clarketm/prow/interrupts"
 )
 
 const metricsPort = 9090

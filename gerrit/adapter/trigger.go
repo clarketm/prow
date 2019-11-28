@@ -23,11 +23,11 @@ import (
 	"github.com/sirupsen/logrus"
 
 	"k8s.io/apimachinery/pkg/util/sets"
-	"k8s.io/test-infra/prow/apis/prowjobs/v1"
-	"k8s.io/test-infra/prow/config"
-	"k8s.io/test-infra/prow/gerrit/client"
-	"k8s.io/test-infra/prow/gerrit/reporter"
-	"k8s.io/test-infra/prow/pjutil"
+	"github.com/clarketm/prow/apis/prowjobs/v1"
+	"github.com/clarketm/prow/config"
+	"github.com/clarketm/prow/gerrit/client"
+	"github.com/clarketm/prow/gerrit/reporter"
+	"github.com/clarketm/prow/pjutil"
 )
 
 // messageFilter builds a filter for jobs based on the messageBody matching the trigger regex of the jobs.

@@ -27,7 +27,7 @@ import (
 	jsonpatch "github.com/evanphx/json-patch"
 	"github.com/sirupsen/logrus"
 
-	v1 "k8s.io/test-infra/prow/apis/prowjobs/v1"
+	v1 "github.com/clarketm/prow/apis/prowjobs/v1"
 
 	"k8s.io/apimachinery/pkg/api/errors"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
@@ -36,8 +36,8 @@ import (
 	"k8s.io/apimachinery/pkg/util/wait"
 	"k8s.io/client-go/tools/cache"
 	"k8s.io/client-go/util/workqueue"
-	clientset "k8s.io/test-infra/prow/client/clientset/versioned"
-	pjinformers "k8s.io/test-infra/prow/client/informers/externalversions/prowjobs/v1"
+	clientset "github.com/clarketm/prow/client/clientset/versioned"
+	pjinformers "github.com/clarketm/prow/client/informers/externalversions/prowjobs/v1"
 )
 
 type reportClient interface {

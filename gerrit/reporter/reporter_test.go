@@ -25,10 +25,10 @@ import (
 
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	"k8s.io/apimachinery/pkg/labels"
-	v1 "k8s.io/test-infra/prow/apis/prowjobs/v1"
-	pjlister "k8s.io/test-infra/prow/client/listers/prowjobs/v1"
-	"k8s.io/test-infra/prow/gerrit/client"
-	"k8s.io/test-infra/prow/kube"
+	v1 "github.com/clarketm/prow/apis/prowjobs/v1"
+	pjlister "github.com/clarketm/prow/client/listers/prowjobs/v1"
+	"github.com/clarketm/prow/gerrit/client"
+	"github.com/clarketm/prow/kube"
 )
 
 var timeNow = time.Date(1234, time.May, 15, 1, 2, 3, 4, time.UTC)

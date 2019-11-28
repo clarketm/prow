@@ -16,7 +16,7 @@ go_library(
         "collector.go",
         "main.go",
     ],
-    importpath = "k8s.io/test-infra/prow/cmd/exporter",
+    importpath = "github.com/clarketm/prow/cmd/exporter",
     visibility = ["//visibility:private"],
     deps = [
         "//prow/apis/prowjobs/v1:go_default_library",

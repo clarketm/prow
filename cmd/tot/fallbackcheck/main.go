@@ -30,10 +30,10 @@ import (
 	"github.com/sirupsen/logrus"
 	"sigs.k8s.io/yaml"
 
-	"k8s.io/test-infra/prow/config"
-	"k8s.io/test-infra/prow/pjutil"
-	"k8s.io/test-infra/prow/pod-utils/downwardapi"
-	"k8s.io/test-infra/prow/pod-utils/gcs"
+	"github.com/clarketm/prow/config"
+	"github.com/clarketm/prow/pjutil"
+	"github.com/clarketm/prow/pod-utils/downwardapi"
+	"github.com/clarketm/prow/pod-utils/gcs"
 )
 
 type options struct {

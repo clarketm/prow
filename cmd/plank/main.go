@@ -24,16 +24,16 @@ import (
 
 	"github.com/sirupsen/logrus"
 	"k8s.io/apimachinery/pkg/labels"
-	"k8s.io/test-infra/prow/interrupts"
-	"k8s.io/test-infra/prow/pjutil"
+	"github.com/clarketm/prow/interrupts"
+	"github.com/clarketm/prow/pjutil"
 
 	"k8s.io/test-infra/pkg/flagutil"
-	"k8s.io/test-infra/prow/config"
-	"k8s.io/test-infra/prow/config/secret"
-	prowflagutil "k8s.io/test-infra/prow/flagutil"
-	"k8s.io/test-infra/prow/logrusutil"
-	"k8s.io/test-infra/prow/metrics"
-	"k8s.io/test-infra/prow/plank"
+	"github.com/clarketm/prow/config"
+	"github.com/clarketm/prow/config/secret"
+	prowflagutil "github.com/clarketm/prow/flagutil"
+	"github.com/clarketm/prow/logrusutil"
+	"github.com/clarketm/prow/metrics"
+	"github.com/clarketm/prow/plank"
 )
 
 type options struct {

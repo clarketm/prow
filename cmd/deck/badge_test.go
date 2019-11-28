@@ -21,7 +21,7 @@ import (
 	"reflect"
 	"testing"
 
-	prowapi "k8s.io/test-infra/prow/apis/prowjobs/v1"
+	prowapi "github.com/clarketm/prow/apis/prowjobs/v1"
 )
 
 func TestPickLatest(t *testing.T) {

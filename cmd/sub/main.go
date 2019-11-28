@@ -25,17 +25,17 @@ import (
 	"time"
 
 	"github.com/sirupsen/logrus"
-	"k8s.io/test-infra/prow/interrupts"
+	"github.com/clarketm/prow/interrupts"
 
-	prowapi "k8s.io/test-infra/prow/apis/prowjobs/v1"
-	prowv1 "k8s.io/test-infra/prow/client/clientset/versioned/typed/prowjobs/v1"
-	"k8s.io/test-infra/prow/config"
-	"k8s.io/test-infra/prow/config/secret"
-	"k8s.io/test-infra/prow/flagutil"
-	"k8s.io/test-infra/prow/logrusutil"
-	"k8s.io/test-infra/prow/metrics"
-	"k8s.io/test-infra/prow/pubsub/reporter"
-	"k8s.io/test-infra/prow/pubsub/subscriber"
+	prowapi "github.com/clarketm/prow/apis/prowjobs/v1"
+	prowv1 "github.com/clarketm/prow/client/clientset/versioned/typed/prowjobs/v1"
+	"github.com/clarketm/prow/config"
+	"github.com/clarketm/prow/config/secret"
+	"github.com/clarketm/prow/flagutil"
+	"github.com/clarketm/prow/logrusutil"
+	"github.com/clarketm/prow/metrics"
+	"github.com/clarketm/prow/pubsub/reporter"
+	"github.com/clarketm/prow/pubsub/subscriber"
 )
 
 var (

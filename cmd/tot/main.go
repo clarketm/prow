@@ -32,13 +32,13 @@ import (
 	"time"
 
 	"github.com/sirupsen/logrus"
-	"k8s.io/test-infra/prow/interrupts"
+	"github.com/clarketm/prow/interrupts"
 
-	"k8s.io/test-infra/prow/config"
-	"k8s.io/test-infra/prow/logrusutil"
-	"k8s.io/test-infra/prow/pjutil"
-	"k8s.io/test-infra/prow/pod-utils/downwardapi"
-	"k8s.io/test-infra/prow/pod-utils/gcs"
+	"github.com/clarketm/prow/config"
+	"github.com/clarketm/prow/logrusutil"
+	"github.com/clarketm/prow/pjutil"
+	"github.com/clarketm/prow/pod-utils/downwardapi"
+	"github.com/clarketm/prow/pod-utils/gcs"
 )
 
 type options struct {

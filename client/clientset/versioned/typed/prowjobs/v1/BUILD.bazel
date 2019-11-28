@@ -8,7 +8,7 @@ go_library(
         "prowjob.go",
         "prowjobs_client.go",
     ],
-    importpath = "k8s.io/test-infra/prow/client/clientset/versioned/typed/prowjobs/v1",
+    importpath = "github.com/clarketm/prow/client/clientset/versioned/typed/prowjobs/v1",
     visibility = ["//visibility:public"],
     deps = [
         "//prow/apis/prowjobs/v1:go_default_library",

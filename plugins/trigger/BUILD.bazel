@@ -44,7 +44,7 @@ go_library(
         "push.go",
         "trigger.go",
     ],
-    importpath = "k8s.io/test-infra/prow/plugins/trigger",
+    importpath = "github.com/clarketm/prow/plugins/trigger",
     deps = [
         "//prow/apis/prowjobs/v1:go_default_library",
         "//prow/config:go_default_library",

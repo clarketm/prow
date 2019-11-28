@@ -6,7 +6,7 @@ go_library(
         "doc.go",
         "options.go",
     ],
-    importpath = "k8s.io/test-infra/prow/pod-utils/wrapper",
+    importpath = "github.com/clarketm/prow/pod-utils/wrapper",
     visibility = ["//visibility:public"],
     deps = [
         "@com_github_fsnotify_fsnotify//:go_default_library",

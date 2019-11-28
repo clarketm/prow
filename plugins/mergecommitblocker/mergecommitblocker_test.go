@@ -21,10 +21,10 @@ import (
 	"testing"
 
 	"github.com/sirupsen/logrus"
-	"k8s.io/test-infra/prow/commentpruner"
-	"k8s.io/test-infra/prow/git/localgit"
-	"k8s.io/test-infra/prow/github"
-	"k8s.io/test-infra/prow/labels"
+	"github.com/clarketm/prow/commentpruner"
+	"github.com/clarketm/prow/git/localgit"
+	"github.com/clarketm/prow/github"
+	"github.com/clarketm/prow/labels"
 )
 
 type strSet map[string]struct{}

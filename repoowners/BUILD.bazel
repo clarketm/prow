@@ -3,7 +3,7 @@ load("@io_bazel_rules_go//go:def.bzl", "go_library", "go_test")
 go_library(
     name = "go_default_library",
     srcs = ["repoowners.go"],
-    importpath = "k8s.io/test-infra/prow/repoowners",
+    importpath = "github.com/clarketm/prow/repoowners",
     visibility = ["//visibility:public"],
     deps = [
         "//prow/config:go_default_library",

@@ -6,7 +6,7 @@ go_library(
         "clientset.go",
         "doc.go",
     ],
-    importpath = "k8s.io/test-infra/prow/client/clientset/versioned",
+    importpath = "github.com/clarketm/prow/client/clientset/versioned",
     visibility = ["//visibility:public"],
     deps = [
         "//prow/client/clientset/versioned/typed/prowjobs/v1:go_default_library",

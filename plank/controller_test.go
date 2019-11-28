@@ -37,12 +37,12 @@ import (
 	"k8s.io/client-go/kubernetes/fake"
 	corev1 "k8s.io/client-go/kubernetes/typed/core/v1"
 	clienttesting "k8s.io/client-go/testing"
-	prowapi "k8s.io/test-infra/prow/apis/prowjobs/v1"
-	prowfake "k8s.io/test-infra/prow/client/clientset/versioned/fake"
-	"k8s.io/test-infra/prow/config"
-	"k8s.io/test-infra/prow/github"
-	"k8s.io/test-infra/prow/github/reporter"
-	"k8s.io/test-infra/prow/pjutil"
+	prowapi "github.com/clarketm/prow/apis/prowjobs/v1"
+	prowfake "github.com/clarketm/prow/client/clientset/versioned/fake"
+	"github.com/clarketm/prow/config"
+	"github.com/clarketm/prow/github"
+	"github.com/clarketm/prow/github/reporter"
+	"github.com/clarketm/prow/pjutil"
 )
 
 type fca struct {

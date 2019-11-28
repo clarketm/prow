@@ -31,7 +31,7 @@ import (
 	"cloud.google.com/go/storage"
 	"k8s.io/apimachinery/pkg/util/sets"
 	"k8s.io/test-infra/pkg/io"
-	"k8s.io/test-infra/prow/gerrit/client"
+	"github.com/clarketm/prow/gerrit/client"
 )
 
 type fakeOpener struct{}

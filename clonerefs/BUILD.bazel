@@ -8,7 +8,7 @@ go_library(
         "parse.go",
         "run.go",
     ],
-    importpath = "k8s.io/test-infra/prow/clonerefs",
+    importpath = "github.com/clarketm/prow/clonerefs",
     visibility = ["//visibility:public"],
     deps = [
         "//prow/apis/prowjobs/v1:go_default_library",

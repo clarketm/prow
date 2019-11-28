@@ -27,7 +27,7 @@ go_library(
         "protect.go",
         "request.go",
     ],
-    importpath = "k8s.io/test-infra/prow/cmd/branchprotector",
+    importpath = "github.com/clarketm/prow/cmd/branchprotector",
     visibility = ["//visibility:public"],
     deps = [
         "//prow/config:go_default_library",
